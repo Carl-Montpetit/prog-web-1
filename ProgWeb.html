@@ -9,27 +9,28 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Camp de jour</title>
         <link rel="stylesheet" href="ProgWeb.css">
+        <script src="ProgWeb.javascript"></script>
     </head>
     <!--Dans le body on met  le contenue principale de la page (la majorité du code)-->
-    <div>
+    <body>
         <nav style="text-align: right;">
             <div class="dropdown">
                 <button class="dropbtn">Nos Programmes
-                    <i class="fa fa-compass" style="font-size:16px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-compass"></i>
                 </button>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Calendrier
-                    <i class="fa fa-calendar" style="font-size:16px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-calendar"></i>
                 </button>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Mon compte
-                    <i class="fa fa-child" style="font-size:16px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-child" ></i>
                 </button>
-                <div style="text-align: left;" class="dropdown-content">
-                    <a href="#">Se connecter</a>
-                    <a href="#">Creer un compte</a>
+                <div class="dropdown-content">
+                    <a href="">Se connecter</a>
+                    <a onclick="openForm()">Creer un compte</a>
                 </div>
             </div>       
         </nav>

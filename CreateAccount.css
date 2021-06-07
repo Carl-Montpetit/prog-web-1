@@ -1,0 +1,14 @@
+body {
+    background: lightblue;
+    margin: 25%;
+     
+}
+::placeholder {
+    color: lightgrey;
+    border: green;
+}
+#pwDoesNotMatch {
+    display: none;
+    color: red;
+    position: relative;
+}
