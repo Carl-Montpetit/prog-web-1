@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <!-- La langue utilisée pour le HTML -->
-<html lang="fr">
-<!-- Dans le head on met les fichiers CSS en *link* avec le HTML -->
+<html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Camp de jour</title>
-        <link rel="stylesheet" href="ProgWeb.css">
-        <script src="ProgWeb.javascript"></script>
+        <!-- Dans le head on met les fichiers CSS en *link* avec le HTML -->
+        <link rel="stylesheet" href="CSS/Main.css">
+        <script src="JS/Main.js"></script>
     </head>
-    <!--Dans le body on met  le contenue principale de la page (la majorité du code)-->
+
     <body>
+        <!--Dans le body on met le contenue principale de la page (la majorité du code)-->
         <nav style="text-align: right;">
             <div class="dropdown">
                 <button class="dropbtn">Nos Programmes
@@ -26,20 +29,19 @@
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Mon compte
-                    <i class="fa fa-child" ></i>
+                    <i class="fa fa-child"></i>
                 </button>
                 <div class="dropdown-content">
                     <a href="">Se connecter</a>
                     <a onclick="openForm()">Creer un compte</a>
                 </div>
-            </div>       
+            </div>
         </nav>
-       <!-- Les headers sont les eyntetes (le haut des pages web) -->
         <header>
+            <!-- Les headers sont les eyntetes (le haut des pages web) -->
             <h1>Programmes</h1>
             <p>Bienvenue sur la page de nos programmes!</p>
         </header>
- <!-- TODO -> Il va nous falloir des href pour les onglets Accueil, programmes, horaire, etc pour la navigation du site. Pour l'instant, je vais commencer avec la page pour afficher les programmes -->
     </body>
 
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Camp de jour</title>
+        <link rel="stylesheet" href="CSS/CreateAccount.css">
+        <script src="JS/CreateAccount.js"></script>
+    </head>
+
+    <body>
+        <form action="/action_page.php">
+            <label for="text">Prenom:</label><br>
+            <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom"><br>
+            <label for="text">Nom:</label><br>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom"><br>
+            <label for="email">Courriel:</label><br>
+            <input type="email" id="email" name="email" placeholder="Entrez votre courriel"><br>
+            <label for="password">Mot de passe:</label><br>
+            <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe"><br>
+            <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
+            <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div><br>
+            <button type="button" onclick="validateCreateAccount(
+            String(document.getElementById('pw').value), String(document.getElementById('pw2').value))">Enregistrer
+            </button>
+        </form>
+    </body>
+
+</html>
