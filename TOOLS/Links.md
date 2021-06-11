@@ -4,7 +4,7 @@
     - https://developer.mozilla.org/en-US/
     - https://htmlcheatsheet.com/
     - https://www.w3schools.com/html/
-2. For pirctures
+2. For pictures
     - https://unsplash.com/
 
 3. For maps
