@@ -1,9 +1,13 @@
 /* THis file is the CSS file of the  Main.html file */
-/* The hex colors style can be find here 
+/* The hex colors style can be found here 
 -> https://coolors.co/004e64-00a5cf-9fffcb-25a18e-7ae582
 excellent source for colors!!
 */
 
+/* Navbar */
+nav {
+    text-align: right;
+}
 /* Dropdown Button */
 .dropbtn {
     background-color:#004e64;
@@ -53,6 +57,11 @@ i {
     text-shadow:2px 2px 4px #000000;
 }
 
+/* What is displayed once connected */
+#nomLogin {
+    display:none;
+}
+
 /* The header of the main page */
 header h1 {
     color: black;
@@ -61,6 +70,6 @@ header h1 {
 /* main content of the main page */
 body {
     /* I'm not sure about the background color yet lol maybe white? We will discuss that in the meeting */
-    background: #7ae582;
+    background: lightblue;
     color:black;
 }

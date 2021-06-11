@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Camp de jour</title>
         <link rel="stylesheet" href="../CSS/CreateAccount.css">
-        <script src="../JS/CreateAccount.js"></script>
     </head>
 
     <body>
@@ -23,9 +22,11 @@
             <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
             <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div><br>
             <button type="button" onclick="validateCreateAccount(
-            String(document.getElementById('pw').value), String(document.getElementById('pw2').value))">Enregistrer
+                String(document.getElementById('pw').value), String(document.getElementById('pw2').value))">Enregistrer
             </button>
         </form>
+
+    <script src="../JS/CreateAccount.js"></script>
     </body>
 
 </html>

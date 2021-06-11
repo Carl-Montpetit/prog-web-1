@@ -1,7 +1,7 @@
 function validateCreateAccount(pw, pw2) {
     if (pw === pw2) {
         window.close('','_parent','');
-        open(href="ProgWeb.html", "", "width=500,height=400");   
+        navLogin();   
     } else {
         invalidPw();
     }
