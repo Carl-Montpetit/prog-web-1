@@ -1,10 +1,20 @@
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+body {
+    background: lightblue;
+    font-family: Verdana, sans-serif;
+}
+
+th {
+    font-size: 48px; 
+    margin-bottom: 0%;
+    padding-top: 10px;
+    text-align: center;
+}
 
 /* Month header test*/
 .month {
-  padding: 50px 25px;
+  padding: 40px 25px;
   width: 100%;
   background: #4a4e81;
   text-align: center;
@@ -25,14 +35,14 @@ body {font-family: Verdana, sans-serif;}
 
 /* Weekdays (Mon-Sun) */
 .weekdays {
-  margin: 0;
   padding: 10px 0;
+  margin: 0;
   background-color:#ddd;
 }
 
 .weekdays li {
   display: inline-block;
-  width: 13.6%;
+  width: 12%;
   color: #666;
   text-align: center;
 }
@@ -47,9 +57,10 @@ body {font-family: Verdana, sans-serif;}
 }
 
 .days li {
+  padding: 10px 0;
   list-style-type: none;
   display: inline-block;
-  width: 13.6%;
+  width: 12%;
   text-align: center;
   margin-bottom: 5px;
   font-size:12px;
@@ -58,7 +69,7 @@ body {font-family: Verdana, sans-serif;}
 
 /* Highlight the "current" day */
 .days li .active {
-  padding: 5px;
+  padding: 10px;
   background: #1abc9c;
   color: white !important
 }
@@ -68,7 +79,7 @@ body {font-family: Verdana, sans-serif;}
   padding: 10px 0;
   background: rgb(224, 139, 139);
   margin: 0;
-  font-weight: bold;
+
   color: black
 }
 
@@ -95,4 +106,13 @@ body {font-family: Verdana, sans-serif;}
 
 .redDays:hover .tooltiptext {
   visibility: visible;
+}
+
+table, td {
+    margin-left: 5%;
+    padding: 30px;
+}
+
+td {
+    width: 45%;
 }

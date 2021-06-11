@@ -11,12 +11,11 @@
         <title>Camp de jour</title>
         <!-- In head we put the link with CSS file for this specific HTML file -->
         <link rel="stylesheet" href="../CSS/Main.css">
-        <script src="../JS/Main.js"></script>
     </head>
 
     <body>
         <!-- In the body with put the majority of the code for the structure (skeleton) of the webpage -->
-        <nav style="text-align: right;">
+        <nav>
             <div class="dropdown">
                 <button class="dropbtn">Accueil
                     <i class="fa fa-home"></i>
@@ -28,7 +27,7 @@
                 </button>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">Calendrier
+                <button onclick="document.location='Calendar.html'" class="dropbtn">Calendrier
                     <i class="fa fa-calendar"></i>
                 </button>
             </div>
@@ -41,11 +40,19 @@
                     <a onclick="openForm()">Creer un compte</a>
                 </div>
             </div>
+            <div id="nomLogin" class="dropdown">
+                <button class="dropbtn">Bob <!-- I would like the user's name to be displayed -->
+                    <i class="fa fa-child" ></i>
+                </button>
+                <div class="dropdown-content-login">
+                    <a href="">Déconnexion</a>
+                </div>
+            </div>
         </nav>
         <header>
             <!-- The headers are the top of pages -->
             <h1>Accueil</h1>
-            <h2>Bienvenue sur le site de notre camp de jour <i>Anti-covidios</i> !</h2>
+            <h2>Bienvenue sur le site de notre camp de jour <i id="antiCovidios">Anti-covidios</i> !</h2>
         </header>
         <h3>C'est un départ pour l'été 2021!</h3>
         <!-- temporary text for testing the website structure and fill a bit the page to see how it looks like (bullshit for now)-->
@@ -67,6 +74,8 @@
             <div>Karim</div>
             <div>Massoud</div>
         </p>
+
+    <script src="../JS/Main.js"></script>
     </body>
 
 </html>
