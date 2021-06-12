@@ -1,0 +1,15 @@
+table {
+    font-family: Arial, Calibri;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 3px solid #000000;
+    text-align: left;
+    padding: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #93ff05;
+}
