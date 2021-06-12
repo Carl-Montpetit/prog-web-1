@@ -64,12 +64,38 @@ i {
 
 /* The header of the main page */
 header h1 {
-    color: black;
+    color: greenyellow;
+    text-align: center;
+    font-family: Algerian;
+    font-size: 70px;
+}
+
+#accueil {
+    color: red;
+    text-align: center;
+    font-family: Arial;
+    font-size: 40px
 }
 
 /* main content of the main page */
 body {
     /* I'm not sure about the background color yet lol maybe white? We will discuss that in the meeting */
-    background: lightblue;
-    color:black;
+    background-image: url("kids3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div.a {
+    text-align: center;
+}
+div.b {
+    text-align: center;
+    background-color: lightskyblue;
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    padding: 5px;
+}
+
 }
