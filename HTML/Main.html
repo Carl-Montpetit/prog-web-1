@@ -2,103 +2,105 @@
 <!-- Language for using HTML -->
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Camp de jour</title>
-    <!-- In head we put the link with CSS file for this specific HTML file -->
-    <link rel="stylesheet" href="../CSS/Main.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Camp de jour</title>
+        <!-- In head we put the link with CSS file for this specific HTML file -->
+        <link rel="stylesheet" href="../CSS/Main.css">
 
-</head>
+    </head>
 
-<body>
-<!-- In the body with put the majority of the code for the structure (skeleton) of the webpage -->
-<nav>
-    <div class="dropdown">
-        <button class="dropbtn">Accueil
-            <i class="fa fa-home"></i>
-        </button>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Nos Programmes
-            <i class="fa fa-compass"></i>
-        </button>
-    </div>
-    <div class="dropdown">
-        <button onclick="document.location='Calendar.html'" class="dropbtn">Calendrier
-            <i class="fa fa-calendar"></i>
-        </button>
-    </div>
-    <div id="monCompte"class="dropdown">
-        <button class="dropbtn">Mon compte
-            <i class="fa fa-child"></i>
-        </button>
-        <div class="dropdown-content">
-            <a onclick="openForm2()">Se connecter</a>
-            <a onclick="openForm()">Creer un compte</a>
-        </div>
-    </div>
-    <div id="nomLogin" class="dropdown">
-        <button id="userName" class="dropbtn">
-        </button>
-        <div class="dropdown-content">
-            <a>Déconnexion</a>
-        </div>
-    </div>
-</nav>
-<header>
-    <!-- The headers are the top of pages -->
-    <h1>Anti-covidios</h1>
-    <h2 id="accueil">Accueil</h2>
-    </div>
-    <div class="b">
-        <h2>Bienvenue sur le site de notre camp de jour!</h2>
-        <h3>C'est un départ pour l'été 2021!</h3>
-        <!-- temporary text for testing the website structure and fill a bit the page to see how it looks like -->
-        <p>
-            Nous voilà sortie de cet enfer de covid 2020! Maintenant il sera <b>enfin</b> possible de profiter sans
-            avoir à s'<b>étouffer</b> au soleil avec son masque (du moins, on le souhaite)!
-        </p>
-        <p>
-            <span style="color: red"><em><b>Important</b>:</span>
-            N'oubliez pas de vous assurez que votre enfant a bien recus le vaccin pour combattre le
-            covid-19 afin d'éviter une explosion de covid entre les enfants du camp de jour.
-        </p>
-        <p>
-            Merci et bon séjour!
-        </p>
-        <p>
-        <div>De vos amis les propriétaires.</div>
-        <div>Carl</div>
-        <div>Matthew</div>
-        <div>Karim</div>
-        <div>Massoud</div>
-        </p>
-    </div>
-</header>
+    <body>
+        <!-- In the body with put the majority of the code for the structure (skeleton) of the webpage -->
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Accueil
+                    <i class="fa fa-home"></i>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Nos Programmes
+                    <i class="fa fa-compass"></i>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button onclick="document.location='Calendar.html'" class="dropbtn">Calendrier
+                    <i class="fa fa-calendar"></i>
+                </button>
+            </div>
+            <div id="monCompte" class="dropdown">
+                <button class="dropbtn">Mon compte
+                    <i class="fa fa-child"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a onclick="openForm2()">Se connecter</a>
+                    <a onclick="openForm()">Creer un compte</a>
+                </div>
+            </div>
+            <div id="nomLogin" class="dropdown">
+                <button id="userName" class="dropbtn">
+                </button>
+                <div class="dropdown-content">
+                    <a>Déconnexion</a>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <!-- The headers are the top of pages -->
+            <h1>Anti-covidios</h1>
+            <h2 id="accueil">Accueil</h2>
+            </div>
+            <div class="b">
+                <h2>Bienvenue sur le site de notre camp de jour!</h2>
+                <h3>C'est un départ pour l'été 2021!</h3>
+                <!-- temporary text for testing the website structure and fill a bit the page to see how it looks like -->
+                <p>
+                    Nous voilà sortie de cet enfer de covid 2020! Maintenant il sera <b>enfin</b> possible de profiter
+                    sans
+                    avoir à s'<b>étouffer</b> au soleil avec son masque (du moins, on le souhaite)!
+                </p>
+                <p>
+                    <span style="color: red"><em><b>Important</b>:</span>
+                    N'oubliez pas de vous assurez que votre enfant a bien recus le vaccin pour combattre le
+                    covid-19 afin d'éviter une explosion de covid entre les enfants du camp de jour.
+                </p>
+                <p>
+                    Merci et bon séjour!
+                </p>
+                <p>
+                    <div>De vos amis les propriétaires.</div>
+                    <div>Carl</div>
+                    <div>Matthew</div>
+                    <div>Karim</div>
+                    <div>Massoud</div>
+                </p>
+            </div>
+        </header>
 
-<div id="createAccountForm">
-    <form action="/action_page.php">
-        <br>
-        <label for="text">Prenom:</label><br>
-        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom"><br>
-        <label for="text">Nom:</label><br>
-        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom"><br>
-        <label for="email">Courriel:</label><br>
-        <input type="email" id="email" name="email" placeholder="Entrez votre courriel"><br>
-        <label for="password">Mot de passe:</label><br>
-        <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe"><br>
-        <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
-        <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div><br>
-        <button type="button" onclick="validateCreateAccount(
+        <div id="createAccountForm">
+            <form action="/action_page.php">
+                <br>
+                <label for="text">Prenom:</label><br>
+                <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom"><br>
+                <label for="text">Nom:</label><br>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom"><br>
+                <label for="email">Courriel:</label><br>
+                <input type="email" id="email" name="email" placeholder="Entrez votre courriel"><br>
+                <label for="password">Mot de passe:</label><br>
+                <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe"><br>
+                <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
+                <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div><br>
+                <button type="button" onclick="validateCreateAccount(
             String(document.getElementById('pw').value), String(document.getElementById('pw2').value))">Enregistrer
-        </button>
-    </form>
-</div>
+                </button>
+            </form>
+        </div>
 
-<script src="../JS/Main.js"></script>
-</body>
+        <script src="../JS/Main.js"></script>
+    </body>
+
 </html>
