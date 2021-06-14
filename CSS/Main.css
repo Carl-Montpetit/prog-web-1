@@ -80,7 +80,7 @@ header h1 {
 /* main content of the main page */
 body {
     /* I'm not sure about the background color yet lol maybe white? We will discuss that in the meeting */
-    background-image: url("https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixid=MnwxMja3fDB8MHxwaG90by1wYWdlfhx8fGVufDB8fhx8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1323&q=80");
+    background-image: url(../IMAGES/kids5.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
