@@ -1,13 +1,16 @@
 section {
     color: white;
     background-image: linear-gradient(#004E64B3, #00A5CFB3, #25A18EB3);
-    border-radius: 25px;
     background-position: center;
     align-items: center;
     margin: 50px;
     padding: 30px;
     height: 500px;
     box-shadow: 10px 10px 20px black;
+    border-style:solid;
+    border-color:#9FFFCB;
+    border-radius: 30px;
+    border-width: 1px;
 }
 
 h2 {
