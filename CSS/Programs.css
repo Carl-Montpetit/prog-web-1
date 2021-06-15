@@ -1,7 +1,33 @@
 body {
-    background-image: url
+    background-image: url(../IMAGES/kids1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+header {
+    background-color: lightskyblue;
+    background-size:auto;
 }
 
 body li li {
     list-style-type:circle;
+}
+
+#classic {
+    background-color: lightskyblue;
+    width:fit-content;
+    height:fit-content;
+}
+
+#artscience {
+    background-color: lightskyblue;
+    width:fit-content;
+    height:fit-content;
+}
+
+#sport {
+    background-color: lightskyblue;
+    width:fit-content;
+    height:fit-content;
 }
