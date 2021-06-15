@@ -16,39 +16,7 @@
 
     <body>
         <!-- In the body with put the majority of the code for the structure (skeleton) of the webpage -->
-        <nav>
-            <div class="dropdown">
-                <button class="dropbtn">Accueil
-                    <i class="fa fa-home"></i>
-                </button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Nos Programmes
-                    <i class="fa fa-compass"></i>
-                </button>
-            </div>
-            <div class="dropdown">
-                <button onclick="document.location='Calendar.html'" class="dropbtn">Calendrier
-                    <i class="fa fa-calendar"></i>
-                </button>
-            </div>
-            <div id="monCompte" class="dropdown">
-                <button class="dropbtn">Mon compte
-                    <i class="fa fa-child"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a onclick="openForm2()">Se connecter</a>
-                    <a onclick="openForm()">Creer un compte</a>
-                </div>
-            </div>
-            <div id="nomLogin" class="dropdown">
-                <button id="userName" class="dropbtn">
-                </button>
-                <div class="dropdown-content">
-                    <a>Déconnexion</a>
-                </div>
-            </div>
-        </nav>
+        <iframe src="./navbar.html" frameborder="0"></iframe>
         <header>
             <!-- The headers are the top of pages -->
             <h1>Anti-covidios</h1>
@@ -80,25 +48,6 @@
                 </p>
             </div>
         </header>
-
-        <div id="createAccountForm">
-            <form action="/action_page.php">
-                <br>
-                <label for="text">Prenom:</label><br>
-                <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom"><br>
-                <label for="text">Nom:</label><br>
-                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom"><br>
-                <label for="email">Courriel:</label><br>
-                <input type="email" id="email" name="email" placeholder="Entrez votre courriel"><br>
-                <label for="password">Mot de passe:</label><br>
-                <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe"><br>
-                <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
-                <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div><br>
-                <button type="button" onclick="validateCreateAccount(
-            String(document.getElementById('pw').value), String(document.getElementById('pw2').value))">Enregistrer
-                </button>
-            </form>
-        </div>
 
         <script src="../JS/Main.js"></script>
     </body>

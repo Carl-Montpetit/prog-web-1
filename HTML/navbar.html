@@ -1,0 +1,73 @@
+<link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../CSS/navbar.css">
+<script src="../JS/Main.js"></script>
+<nav>
+    <div class="dropdown">
+        <a href="Main.html" target="_top"><button class="dropbtn">Accueil
+            <i class="fa fa-home"></i>
+        </button></a>
+    </div>
+    <div class="dropdown">
+        <a href="Programs.html" target="_top"><button class="dropbtn">Nos Programmes
+            <i class="fa fa-compass"></i>
+        </button></a>
+    </div>
+    <div class="dropdown">
+        <a href="Calendar.html" target="_top"><button class="dropbtn">Calendrier
+            <i class="fa fa-calendar"></i>
+        </button></a>
+    </div>
+    <div id="monCompte"class="dropdown">
+        <button class="dropbtn">Mon compte
+            <i class="fa fa-child"></i>
+        </button>
+        <div class="dropdown-content">
+            <a onclick="connect()" target="_top">Se connecter</a>
+            <a onclick="openForm()" >Creer un compte</a>
+        </div>
+    </div>
+    <div id="nomLogin" class="dropdown">
+        <button id="userName" class="dropbtn">
+        </button>
+        <div class="dropdown-content">
+            <a>Ajouter un Membre</a>
+            <a>Mes Inscriptions</a>
+            <a onclick="disconnect()" >Déconnexion</a>
+        </div>
+    </div>
+</nav>
+
+<div id="createAccountForm">
+    <form action="/action_page.php">
+        <br>
+        <label for="text">Prenom:</label><br>
+        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom" required><br>
+        <label for="text">Nom:</label><br>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required><br>
+        <label for="email">Courriel:</label><br>
+        <input type="email" id="email" name="email" placeholder="Entrez votre courriel" required><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe" required><br>
+        <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe" required><br>
+        <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div><br>
+        <button type="button" onclick="validateCreateAccount(
+            String(document.getElementById('pw').value), String(document.getElementById('pw2').value))">Enregistrer
+        </button>
+        <!-- <input type="submit" value="Enregistrer"> -->
+    </form>
+</div>
+
+<div id="connectForm">
+    <form action="/action_page.php">
+        <br>
+        <label for="email">Courriel:</label><br>
+        <input type="email" id="email" name="email" placeholder="Entrez votre courriel" required><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe" required><br>
+        <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div><br>
+        <button type="button" onclick="validateAccount()">Se connecter
+        </button>
+        <!-- <input type="submit" value="Enregistrer"> -->
+    </form>
+</div>
