@@ -1,0 +1,37 @@
+body {
+    background-image: url(../IMAGES/water2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: lightgoldenrodyellow;
+    text-align: center;
+    font-family: Algerian;
+    font-size: 40px;
+    animation-name: Programmes;
+    animation-duration: 8s;
+    text-align: center;
+    margin: 50px;
+    text-shadow:10px 10px 20px black;
+}
+
+@keyframes Programmes {
+    0%   {color: #004E64;}
+    25%  {color: #FAF33E;}
+    50%  {color: #379634;}
+    100% {color: #CE8147;}
+}
+
+h2 {
+    text-align: center;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
