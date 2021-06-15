@@ -5,11 +5,24 @@ table {
 }
 
 td, th {
-    border: 3px solid #000000;
+    border: 3px solid white;
     text-align: left;
     padding: 6px;
 }
 
 tr:nth-child(even) {
-    background-color: #93ff05;
+    background-color: lightblue;
+}
+
+body {
+    /* I'm not sure about the background color yet lol maybe white? We will discuss that in the meeting */
+    background-image: url(../IMAGES/sport1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: #00A5CF;
+    color: black;
 }

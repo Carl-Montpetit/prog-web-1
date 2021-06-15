@@ -1,33 +1,62 @@
+table {
+    width: 100%;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(#004E64B3, #00A5CFB3, #25A18EB3);
+    border-radius: 25px;
+    background-position: center;
+    align-items: center;
+    margin: 25px;
+    padding: 15px;
+    height: 700px;
+}
+
+h2 {
+    font-size: 22px;
+    color: lightgoldenrodyellow;
+    text-align: center;
+    text-decoration: underline greenyellow;
+}
+
+h3 {
+    font-size: 22px;
+    color:  lightgoldenrodyellow;
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+    font-size: 22px;
+}
+
 body {
-    background-image: url(../IMAGES/kids1.jpg);
+    background-image: url(../IMAGES/water5.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     color: black;
 }
 
 header {
-    background-color: lightskyblue;
-    background-size:auto;
+    color: lightgoldenrodyellow;
+    text-align: center;
+    font-family: Algerian;
+    font-size: 40px;
+    animation-name: Programmes;
+    animation-duration: 8s;
+    text-align: center;
+    margin: 50px;
+    text-shadow:10px 10px 10px black;
+}
+
+@keyframes Programmes {
+    0%   {color: #004E64;}
+    25%  {color: #FAF33E;}
+    50%  {color: #379634;}
+    100% {color: #CE8147;}
 }
 
 body li li {
     list-style-type:circle;
-}
-
-#classic {
-    background-color: lightskyblue;
-    width:fit-content;
-    height:fit-content;
-}
-
-#artscience {
-    background-color: lightskyblue;
-    width:fit-content;
-    height:fit-content;
-}
-
-#sport {
-    background-color: lightskyblue;
-    width:fit-content;
-    height:fit-content;
 }
