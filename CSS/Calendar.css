@@ -36,7 +36,7 @@ th {
 .month {
   padding: 40px 25px;
   width: 100%;
-  background: #4a4e81B3;
+  background: #4a4e81E6;
   text-align: center;
 }
 
@@ -47,7 +47,7 @@ th {
 }
 
 .month ul li {
-  color: #FFFFFF;
+  color: #FFFFFFE6;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -57,20 +57,20 @@ th {
 .weekdays {
   padding: 10px 0;
   margin: 0;
-  background-color:#ddddddB3;
+  background-color:#ddddddE6;
 }
 
 .weekdays li {
   display: inline-block;
   width: 12%;
-  color: #666666;
+  color: #666666E6;
   text-align: center;
 }
 
 /* Days (1-31) */
 .days {
   padding: 10px 0;
-  background: #eeeeeeB3;
+  background: #eeeeeeE6;
   margin: 0;
   font-weight: bold;
   color: black
@@ -84,20 +84,20 @@ th {
   text-align: center;
   margin-bottom: 5px;
   font-size:12px;
-  color: #777;
+  color: #777777CC;
 }
 
 /* Highlight the "current" day */
 .days li .active {
   padding: 10px;
-  background: #1abc9c;
+  background: #1abc9cE6;
   color: white !important
 }
 
 /* Red Days */
 .redDays {
   padding: 10px 0;
-  background: rgba(224, 139, 139, 0.3);
+  background: rgba(224, 139, 139, 0.9);
   margin: 0;
 
   color: black
@@ -107,14 +107,14 @@ th {
 .redDays {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted #000000E6;
 }
 
 .redDays .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: #000000E6;
+  color: #ffffffCC;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
