@@ -103,14 +103,32 @@ th {
   color: black
 }
 
-/* Hover text */
-.redDays {
+/* Green Days */
+.greenDays {
+  padding: 10px 0;
+  background: rgba(139, 224, 167, 0.9);
+  margin: 0;
+
+  color: black
+}
+
+/* Yellow Days */
+.yellowDays {
+  padding: 10px 0;
+  background: rgba(206, 209, 30, 0.9);
+  margin: 0;
+
+  color: black
+}
+
+/* Hover text for color text*/
+.redDays, .greenDays, .yellowDays {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted #000000E6;
 }
 
-.redDays .tooltiptext {
+.redDays .tooltiptext, .greenDays .tooltiptext, .yellowDays .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: #000000E6;
@@ -124,7 +142,7 @@ th {
   z-index: 1;
 }
 
-.redDays:hover .tooltiptext {
+.redDays:hover .tooltiptext, .greenDays:hover .tooltiptext, .yellowDays:hover .tooltiptext {
   visibility: visible;
 }
 
