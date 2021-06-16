@@ -1,43 +1,66 @@
-function openForm() {
-  createForm = document.getElementById("createAccountForm");
-  createForm.style.display = "inline";
+function showCover() {
+  let coverDiv = document.createElement('div');
+  coverDiv.id = 'cover-div';
+
+
+  document.body.style.overflowY = 'hidden';
+
+  document.body.append(coverDiv);
 }
 
-function connect() {
-  connectForm = document.getElementById("connectForm");
-  connectForm.style.display = "inline";
+function hideCover() {
+  document.getElementById('cover-div').remove();
+  document.body.style.overflowY = '';
+}
+
+function showPrompt(divConnect, formConnect, callback) {
+  showCover();
+  let form = document.getElementById(formConnect);
+  let container = document.getElementById(divConnect);
+
+  function complete(value) {
+    hideCover();
+    container.style.display = 'none';
+    document.onkeydown = null;
+    callback(value);
+  }
+
+  form.onsubmit = function() {
+    let value = form.prenom.value;
+    var anonymousObjects = document.getElementsByClassName("anonymous");
+    var i;
+    for (i = 0; i < anonymousObjects.length; i++) {
+      anonymousObjects[i].style.display = "none";
+    }
+    var loggedInObjects = document.getElementsByClassName("loggedIn");
+    for (i = 0; i < loggedInObjects.length; i++) {
+      loggedInObjects[i].style.display = "inline-block";
+    }
+    complete(value);
+    return false;
+  };
+
+  container.style.display = 'block';
+  form.elements.text.focus();
+}
+
+function connect(divConnect, formConnect) {
+  showPrompt(divConnect, formConnect, function(value) {
+    value = value + ' <i class="fa fa-child" ></i>';
+    document.getElementById("monCompteButton").innerHTML = value;
+  });
 }
 
 function disconnect() {
-  loggedInButton = document.getElementById("nomLogin");
-  loginButton = document.getElementById("monCompte");
-  loggedInButton.style.display = "none";
-  loginButton.style.display = "inline-block";
-}
-
-function validateAccount() {
-  connectForm = document.getElementById("connectForm");
-  loginButton = document.getElementById("monCompte");
-  loggedInButton = document.getElementById("nomLogin");
-  connectForm.style.display = "none";
-  loginButton.style.display = "none";
-  userName = String(document.getElementById("prenom").value) + ' <i class="fa fa-child" ></i>';
-  document.getElementById("userName").innerHTML = userName;
-  loggedInButton.style.display = "inline-block";
-}
-
-function validateCreateAccount(pw, pw2) {
-  if (pw === pw2) {
-    createForm = document.getElementById("createAccountForm");
-    loginButton = document.getElementById("monCompte");
-    loggedInButton = document.getElementById("nomLogin");
-    createForm.style.display = "none";
-    loginButton.style.display = "none";
-    userName = String(document.getElementById("prenom").value) + ' <i class="fa fa-child" ></i>';
-    document.getElementById("userName").innerHTML = userName;
-    loggedInButton.style.display = "inline-block";
-  } else {
-      invalidPw();
+  document.getElementById("monCompteButton").innerHTML = "Mon Compte" + ' <i class="fa fa-child" ></i>';
+  var anonymousObjects = document.getElementsByClassName("anonymous");
+  var i;
+  for (i = 0; i < anonymousObjects.length; i++) {
+    anonymousObjects[i].style.display = "inline-block";
+  }
+  var loggedInObjects = document.getElementsByClassName("loggedIn");
+  for (i = 0; i < loggedInObjects.length; i++) {
+    loggedInObjects[i].style.display = "none";
   }
 }
 

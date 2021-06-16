@@ -52,7 +52,6 @@ div.b {
     margin: auto;
     padding: 10px;
     box-shadow: 10px 0px 20px;
-    border
 }
 
 iframe {
@@ -62,7 +61,7 @@ iframe {
     margin-top: 0px;
     overflow: hidden;
     width: 100%;
-    height: 450px;
+    height: 100%;
 }
 #text1 {
     padding-top: 50px;
