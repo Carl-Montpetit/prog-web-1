@@ -24,14 +24,107 @@ h1 {
 }
 
 h2 {
-    text-align: center;
+    text-align: left;
 
 }
 
 h3 {
-    text-align: center;
+    text-align: left;
 }
 
 h4 {
-    text-align: center;
+    text-align: left;
 }
+
+.row {
+    
+}
+.col-25 {
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#004e64;
+    background-color: rgba(135, 206, 250, 0.6);
+    margin:auto;
+    padding: 10px;
+    box-shadow: 10px 0px 20px;
+    width:max-content;
+    height:max-content;
+    transform: translateY(100px);
+}
+
+.col-50 {
+    
+}
+
+.col-75 {
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#004e64;
+    background-color: rgba(135, 206, 250, 0.6);
+    width:max-content;
+    height:max-content;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 10px 0px 20px;
+    
+}
+
+.container {
+}
+
+.icon-container {
+
+}
+
+.btn {
+
+}
+
+.price {
+
+}
+
+#fname {
+
+}
+
+#email {
+
+}
+
+#adr {
+
+}
+
+#city {
+
+}
+
+#zip {
+
+}
+
+#cname {
+
+}
+
+#ccn {
+
+}
+
+#expmonth {
+
+}
+
+#expyear {
+
+}
+
+#cvv {
+
+}
+
+
+

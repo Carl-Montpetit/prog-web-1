@@ -8,11 +8,11 @@ Note : Pour cocher une tâche il suffit de faire comme ceci :
 
 ## Usager
 
-- [x] (**CARL**) L’usager doit **voir les différents programmes offerts** avec leur **description**, les **activités**, l’**horaire** et le **prix**. 
-- [ ] L’usager doit **créer un compte** afin d’**inscrire un enfant** à un programme (nom, prénom, courriel, adresse, date de naissance).
+- [x] L’usager doit **voir les différents programmes offerts** avec leur **description**, les **activités**, l’**horaire** et le **prix**. 
+- [x] L’usager doit **créer un compte** afin d’**inscrire un enfant** à un programme (nom, prénom, courriel, adresse, date de naissance).
 - [ ] L’usager doit **ajouter un membre** de sa famille (enfant) à son compte afin de l’**inscrire à un programme** (nom, prénom, date de naissance).
 - [ ] L’usager doit **ajouter des inscriptions à son panier** d’achats afin d’inscrire un ou plusieurs membres de la famille à **un ou plusieurs programmes**.
-- [ ] L’usage doit **être capable de s’authentifier à son compte**.
+- [x] L’usage doit **être capable de s’authentifier à son compte**.
 - [ ] L’usager doit **être capable de voir les programmes inscrits en cours**.
 - [ ] L’usager doit **être capable de payer sa facture** (simulation).
 - [ ] L’usager doit **être capable de voir l’historique des programmes complétés**.
