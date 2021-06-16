@@ -21,6 +21,12 @@ h2 {
 }
 
 h3 {
+    font-size: 40px;
+    color:  rgb(252, 252, 252);
+    text-align: center;
+}
+
+h4 {
     font-size: 22px;
     color:  lightgoldenrodyellow;
     text-align: center;
@@ -29,6 +35,10 @@ h3 {
 ul {
     text-align: left;
     font-size: 22px;
+}
+
+h2, h3, h4 {
+    line-height: 10px;
 }
 
 body {
@@ -73,9 +83,4 @@ iframe {
     overflow: hidden;
     width: 100%;
     height: 450px;
-}
-
-.price {
-  text-align: center;
-  color:red;
 }
