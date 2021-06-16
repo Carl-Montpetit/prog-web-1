@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/Programs.css">
     <title>Programmes</title>
 </head>
@@ -16,7 +18,7 @@
     </header>
     <table>
         <td>
-            <section id="classic">
+            <section draggable="true" ondragstart="drag(event)" id="classic">
                 <h2><strong>LE CLASSIQUE</strong></h2>
                 <h3><strong>100$</strong></h3>
                 <h4>Ce programme comprend :</h4>
@@ -33,7 +35,7 @@
             </section>
         </td>
         <td>
-            <section id="artscience">
+            <section draggable="true" ondragstart="drag(event)" id="artscience">
                 <h2><strong>LES ARTS ET LA SCIENCE</strong></h2>
                 <h3><strong>150$</strong></h3>
                 <h4>Ce programme comprend :</h4>
@@ -56,12 +58,12 @@
                     </ul>
                 </ul>
                 <h4>
-                    Ce programme <u>ne comprend pas</u> d'activités du type <i>sportif</i> !
+                    Ce programme <u>ne comprend pas</u><br><br><br> d'activités du type <i>sportif</i> !
                 </h4>
             </section>
         </td>
         <td>
-            <section id="sport">
+            <section draggable="true" ondragstart="drag(event)" id="sport">
                 <h2><strong>L'ENFANT ACTIF</strong></h2>
                 <h3><strong>100$</strong></h3>
                 <h4>Ce programme comprend :</h4>
@@ -79,7 +81,12 @@
                 </ul>
             </section>
         </td>
+        <td>
+            <section ondrop="drop(event)" ondragover="allowDrop(event)" id="cart"><i class="fa fa-cart-arrow-down"></i></section>
+        </td>
     </table>
+
+    <script src="../JS/Main.js"></script>
 </body>
 
 </html>

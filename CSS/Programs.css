@@ -1,11 +1,13 @@
 section {
+    position: relative;
     color: white;
     background-image: linear-gradient(#004E64B3, #00A5CFB3, #25A18EB3);
     background-position: center;
     align-items: center;
     margin: 50px;
     padding: 30px;
-    height: 500px;
+    height: 600px;
+    width: fit-content;
     box-shadow: 10px 10px 20px black;
     border-style:solid;
     border-color:#9FFFCBB3;
@@ -83,4 +85,17 @@ iframe {
     overflow: hidden;
     width: 100%;
     height: 100%;
+}
+
+.fa {
+    text-align: center;
+    font-size:120px;color:#7ae582;
+    text-shadow:2px 2px 4px #000000;
+}
+
+#cart {
+    /* margin-left: 450px; */
+    background-image: linear-gradient(#25A18EB3, #00A5CFB3,  #004E64B3);
+    position: relative;
+    height: fit-content;
 }

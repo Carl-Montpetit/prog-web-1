@@ -13,7 +13,6 @@ body {
   font-size: 40px;
   animation-name: Programmes;
   animation-duration: 8s;
-  text-align: center;
   margin: 50px;
   text-shadow:10px 10px 20px black;
 }

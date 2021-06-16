@@ -68,3 +68,26 @@ function invalidPw() {
   var alert = document.getElementById("pwDoesNotMatch");
   alert.style.display = "inline";
 }
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  item = document.getElementById(data);
+  item.childNodes[3].remove();
+  item.childNodes[4].remove();
+  item.childNodes[5].remove();
+  if (item.childNodes.length > 8) {
+    item.childNodes[6].remove();
+    item.childNodes[7].remove();
+  }
+  item.style.height = "20px";
+}
