@@ -1,0 +1,37 @@
+Développeurs :
+1. Matthew Jovani
+2. Karim Massoud
+3. Carl Montpetit
+
+
+
+Fonctionnalités (26/30) :
+1. La vue profil de l'utilisateur est manquante, AddMember.html ne représente pas toutes les fonctionnalités demandées comme par exemple la gestion des membres de la famille (modifier, supprimer) et leurs inscriptions, l’historique des inscriptions, ..
+2. La vue profil de l'administrateur est absente afin de représenter les fonctionnalités demandées comme par exemple gérer les sessions, les activités, les programmes, ..
+
+
+Qualité du code (15/20) :
+1. Avertissement et erreurs dans les fichiers .html : The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment, Saw a form start tag,  but there was already an active form element. Nested forms are not allowed, Consider adding a lang attribute to the html start tag to declare the language of this document, 
+The character encoding was not declared, Bad value cc-number for attribute autocomplete on element input: The autofill field name cc-number is not allowed in this context., ....
+2. Utilisation de style css inline plutôt que dans un fichier .css dédié
+
+
+Qualité du design (20/20) :
+
+
+Qualité de l’interface graphique (15/20) :
+1. Dans la vue programmes quelques éléments ex:  les arts et la science, le texte est plus grand que son container 
+2. Attention aux fautes de français d’autant plus sur le titre principal de votre page ex : Liste des programmes offerts 
+3. Pas de bouton X ou annuler pour fermer connexion ou register
+4. Champs date de naissance trop petit comparé aux autres champs du formulaire AddMember.html et manque un margin bottom par la suite.
+5. Vous avez une page Login.html qui ne fait pas le login.
+6. Le choix de texte noir sur un fond sombre ou l’inverse rend le contenu illisible ex dans RegisterPrograms.html
+7. RegisterPrograms.html n'a pas de menu de navigation
+
+
+
+Commentaires (9/10) :
+
+
+Autres Remarques :
+1. Éviter de déposer le .git avec votre projet.
