@@ -37,8 +37,8 @@
                 </p>
                 <p>
                     Merci et bon séjour!
-                </p>
-                <p id="proprio">
+                    </p>
+                    <p id="proprio">
                     <div>De vos amis les propriétaires.</div>
                     <div id="smiley">😃</div>
                     <br>
@@ -46,9 +46,8 @@
                     <div>Matthew</div>
                     <div>Karim</div>
                     <div>Massoud</div>
-                </p>
-            </div>
-
+                    </p>
+            </div>uePFPy8D5p_Z7r_ztWpsuePFPy8D5p_Z7r_ztWps
             <div class="c">
                 <h2>Informations importantes</h2>
                 <ul id="bullets">
@@ -63,7 +62,8 @@
                     <ul>
                         <li>Un horaire de <strong>5</strong>jours</li>
                         <li>Des activités ou des blocs d'activités (activités composé d'activités) pour
-                            <strong>chaque jours</strong></li>
+                            <strong>chaque jours</strong>
+                        </li>
                         <li>Une description</li>
                         <li>Des moniteurs</li>
                         <li>Un horaire</li>
@@ -76,4 +76,5 @@
         </header>
         <script src="../JS/Main.js"></script>
     </body>
+
 </html>
