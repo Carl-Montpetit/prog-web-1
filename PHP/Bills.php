@@ -4,13 +4,113 @@
 
 <head>
     <title>Paiement</title>
+    <!-- Ajust the display in function of the screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- To link the file to the style sheet -->
     <link rel="stylesheet" href="../CSS/Bills.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Validation jQuery du form -->
+    <script>
+        $(document).ready(
+            function () { // attend que le chargement du document soit terminé avant d'executer le code qui suit
+
+                $('#monForm').validate({ // initialise la validation sur mon form
+                    rules: {
+                        prenom: {
+                            lettersonly: true,
+                            required: true,
+                            maxWords: 1,
+                            rangelength: [3, 20],
+
+                        },
+                        nom: {
+                            lettersonly: true,
+                            required: true,
+                            maxWords: 1,
+                            rangelength: [3, 20],
+                        },
+                        courriel: {
+                            alphanumecic: true,
+                            required: true,
+                            email: true,
+                            remote: "check-email.php", // pour valider que le courriel est unique
+                        },
+                        adresse: {
+                            alphanumecic: true,
+                            required: true,
+                            maxWords: 1,
+                            rangelength: [3, 20],
+                        },
+                        codePostal: {
+                            required: true,
+                            pattern: "^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$",
+                        },
+                        ville: {
+                            lettersonly: true,
+                            required: true,
+                            maxWords: 3,
+                            rangelength: [3, 20],
+                        },
+                        entrerPays: {
+                            required: true,
+                        },
+                        motDePasse: {
+                            required: true,
+                            pattern: "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
+                        }
+                    },
+                    message: {
+                        prenom: {
+                            lettersonly: "L'entrée de votre prénom doit contenir que des lettres!",
+                            required: "S'il vous plait, veuillez entrer votre prénom!",
+                            maxWords: "Seulement un mot est autoriser pour le prénom!",
+                            rangelength: "Le prénom doit contenir au minimum 3 lettres et au maximum 20 inclusivement!"
+
+                        },
+                        nom: {
+                            lettersonly: "L'entrée de votre nom doit contenir que des lettres!",
+                            required: "S'il vous plait, veuillez entrer votre prénom!",
+                            maxWords: "Seulement un mot est autoriser pour le prénom!",
+                            rangelength: "Le prénom doit contenir au minimum 3 lettres et au maximum 20 inclusivement!",
+                        },
+                        courriel: {
+                            required: "S'il vous plait, veuillez entrer votre adresse courriel!",
+                            email: "L'adresse courriel doit être du format adresse courriel (ex: abc123@gmail.com)",
+                            remote: "Ce courriel est déjà lié à un compte!",
+                        },
+                        adresse: {
+                            alphanumecic: "L'adresse n'existe pas, veuillez recommencer!",
+                            required: "S'il vous plait, veuillez entrer votre adresse!",
+                            rangelength: "L'adresse doit contenir entre 3 et 30 caractères inclusivement!",
+                        },
+                        codePostal: {
+                            required: "S'il vous plait, veuillez entrer votre code postal!",
+                            pattern: "Le code postal n'existe pas, veuillez recommencer!",
+                        },
+                        ville: {
+                            lettersonly: "L'entrée de votre ville doit contenir que des lettres!",
+                            required: "S'il vous plait, veuillez entrer votre ville!",
+                            maxWords: "La ville peut contenir au maximum 3 mots!",
+                            rangelength: "La ville doit contenir entre 3 et 20 lettres inclusivement!"
+                        },
+                        entrerPays: {
+                            required: "S'il vous plait, veuillez selectionner votre pays dans la liste!",
+                        },
+                        motDePasse: {
+                            required: "S'il vous plait, veuillez entrer votre mot de passe!",
+                            pattern: "Le mot de passe doit contenir : 1 lettre majuscule, 1 lettre minuscule, 1 nombre et 8 caractères ou plus",
+                        },
+                    },
+                });
+
+            });
+    </script>
 </head>
 
-<body>
+<body class>
 <h1>Paiement de votre facture</h1>
 <div class="row">
     <div class="col-75">
@@ -18,15 +118,16 @@
             <div class="row">
                 <div class="col-50">
                     <h3>Information personnel</h3>
-                    <label for="fname"><em class="fa fa-user"></em> Nom complet</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Carl Montpetit">
-                    <label for="email"><em class="fa fa-envelope"></em> Courriel</label>
-                    <input type="text" id="email" name="email" placeholder="...@exemple.com">
-                    <label for="adr"><em class="fa fa-address-card-o"></em> Addresse</label>
-                    <input type="text" id="adr" name="address" placeholder="1234 rue Lacordaire">
-                    <label for="city"><em class="fa fa-institution"></em> Ville</label>
-                    <input type="text" id="city" name="city" placeholder="Montréal">
-
+                    <form class="inputs"
+                        <label for="fname"><em class="fa fa-user"></em> Nom complet</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Carl Montpetit">
+                        <label for="email"><em class="fa fa-envelope"></em> Courriel</label>
+                        <input type="text" id="email" name="email" placeholder="...@exemple.com">
+                        <label for="adr"><em class="fa fa-address-card-o"></em> Addresse</label>
+                        <input type="text" id="adr" name="address" placeholder="1234 rue Lacordaire">
+                        <label for="city"><em class="fa fa-institution"></em> Ville</label>
+                        <input type="text" id="city" name="city" placeholder="Montréal">
+                    </form>
                     <div class="row">
                         <div class="col-50">
                             <label for="country">Pays</label>

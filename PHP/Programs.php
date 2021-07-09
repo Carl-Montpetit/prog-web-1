@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <iframe src="./navbar.html" frameborder="0"></iframe>
+    <iframe src="./navbar.php" frameborder="0"></iframe>
     <header>
         <h1>Liste des programmes offert</h1>
     </header>

@@ -5,17 +5,17 @@
 <body>
 <nav>
     <div class="dropdown">
-        <a href="Main.html" target="_top"><button class="dropbtn">Accueil
+        <a href="Main.php" target="_top"><button class="dropbtn">Accueil
             <i class="fa fa-home"></i>
         </button></a>
     </div>
     <div class="dropdown">
-        <a href="Programs.html" target="_top"><button class="dropbtn">Nos Programmes
+        <a href="Programs.php" target="_top"><button class="dropbtn">Nos Programmes
             <i class="fa fa-compass"></i>
         </button></a>
     </div>
     <div class="dropdown">
-        <a href="Calendar.html" target="_top"><button class="dropbtn">Calendrier
+        <a href="Calendar.php" target="_top"><button class="dropbtn">Calendrier
             <i class="fa fa-calendar"></i>
         </button></a>
     </div>

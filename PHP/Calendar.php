@@ -7,7 +7,7 @@
 <link href="..\CSS\Calendar.css" rel="stylesheet">
 
 <body>
-    <iframe src="./navbar.html" frameborder="0"></iframe>
+    <iframe src="./navbar.php" frameborder="0"></iframe>
     <table>
         <tr>
             <th id="title" colspan="2">Calendrier été 2021</th>

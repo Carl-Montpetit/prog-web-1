@@ -16,7 +16,7 @@
 
     <body>
         <!-- In the body with put the majority of the code for the structure (skeleton) of the webpage -->
-        <iframe src="./navbar.html" frameborder="0"></iframe>
+        <iframe src="./navbar.php" frameborder="0"></iframe>
         <header>
             <!-- The headers are the top of pages -->
             <h1>Anti-covidios</h1>
