@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+/sonarlint/
+/inspectionProfiles/
+/codeStyles/
+/discord.xml/
+/dbnavigator.xml/
+/jsLibraryMappings.xml/
+/junitgenerator-prj-settings.xml/
+/progweb-1.iml/
+/vcs.xml/
+/workspace.xml/

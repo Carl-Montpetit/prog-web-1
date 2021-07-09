@@ -1,6 +1,6 @@
 body {
     background-image: url(../IMAGES/water2.jpg);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -13,14 +13,22 @@ h1 {
     animation-duration: 8s;
     text-align: center;
     margin: 50px;
-    text-shadow:10px 10px 20px black;
+    text-shadow: 10px 10px 20px black;
 }
 
 @keyframes Programmes {
-    0%   {color: #004E64;}
-    25%  {color: #FAF33E;}
-    50%  {color: #379634;}
-    100% {color: #CE8147;}
+    0% {
+        color: #004E64;
+    }
+    25% {
+        color: #FAF33E;
+    }
+    50% {
+        color: #379634;
+    }
+    100% {
+        color: #CE8147;
+    }
 }
 
 h2 {
@@ -37,38 +45,39 @@ h4 {
 }
 
 .row {
-    
+
 }
+
 .col-25 {
     border-radius: 50px;
     border-style: solid;
     border-width: 2px;
-    border-color:#004e64;
+    border-color: #004e64;
     background-color: rgba(135, 206, 250, 0.6);
-    margin:auto;
+    margin: auto;
     padding: 10px;
     box-shadow: 10px 0px 20px;
-    width:max-content;
-    height:max-content;
+    width: max-content;
+    height: max-content;
     transform: translateY(100px);
 }
 
 .col-50 {
-    
+
 }
 
 .col-75 {
     border-radius: 50px;
     border-style: solid;
     border-width: 2px;
-    border-color:#004e64;
+    border-color: #004e64;
     background-color: rgba(135, 206, 250, 0.6);
-    width:max-content;
-    height:max-content;
+    width: max-content;
+    height: max-content;
     margin: auto;
     padding: 10px;
     box-shadow: 10px 0px 20px;
-    
+
 }
 
 .container {
