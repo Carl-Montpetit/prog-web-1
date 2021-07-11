@@ -48,24 +48,23 @@
         <div>Massoud</div>
         </p>
     </div>
-    uePFPy8D5p_Z7r_ztWpsuePFPy8D5p_Z7r_ztWps
     <div class="c">
         <h2>Informations importantes</h2>
         <ul id="bullets">
             <li>Les offres pour l'été 2021 :</li>
             <br>
             <ul>
-                <li><strong>3</strong> différentes programmation par semaine</li>
+                <li><strong>3</strong> différentes programmations par semaine</li>
                 <li><strong>1</strong> programme par <strong>semaine</strong></li>
-                <li><strong>1</strong> session dure <strong>15 semaines</strong></li>
+                <li><strong>1</strong> session a une durée de <strong>15 semaines</strong></li>
                 <br>
             </ul>
-            <li>Un enfant peut être inscrit pendant <strong>une ou plusieurs</strong> semaine</li>
+            <li>Un enfant peut être inscrit pendant <strong>une ou plusieurs</strong> semaines</li>
             <br>
-            <li>Un programme contient:</li>
+            <li>Un programme contient :</li>
             <br>
             <ul>
-                <li>Un horaire de <strong>5</strong>jours</li>
+                <li>Un horaire de <strong>5</strong> jours</li>
                 <li>Des activités ou des blocs d'activités (activités composé d'activités) pour
                     <strong>chaque jours</strong>
                 </li>

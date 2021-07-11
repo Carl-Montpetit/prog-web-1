@@ -166,6 +166,7 @@
                             <label for="cvv">CVV</label>
                             <input type="text" id="cvv" name="cvv" placeholder="354">
                             <br><br>
+                        </div>
                     </form>
                 </div>
             <hr>
