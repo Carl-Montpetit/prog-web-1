@@ -1,7 +1,19 @@
-body {
-    background-image: url(../IMAGES/water2.jpg);
+html {
+    background: url(../images/water2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
+}
+
+iframe {
+    top: 0px;
+    position: absolute;
+    padding-top: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -31,21 +43,11 @@ h1 {
     }
 }
 
-h2 {
-    text-align: left;
-
-}
-
 h3 {
-    text-align: left;
-}
-
-h4 {
-    text-align: left;
-}
-
-.row {
-
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration-line: underline;
 }
 
 .col-25 {
@@ -55,15 +57,12 @@ h4 {
     border-color: #004e64;
     background-color: rgba(135, 206, 250, 0.6);
     margin: auto;
-    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
     box-shadow: 10px 0px 20px;
-    width: max-content;
-    height: max-content;
+    width: 200px;
+    height: 700;
     transform: translateY(100px);
-}
-
-.col-50 {
-
 }
 
 .col-75 {
@@ -73,67 +72,52 @@ h4 {
     border-color: #004e64;
     background-color: rgba(135, 206, 250, 0.6);
     width: max-content;
-    height: max-content;
+    height: 700px;
     margin: auto;
-    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 50px;
     box-shadow: 10px 0px 20px;
-
 }
 
-.container {
+#panier_title {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
 }
 
-.icon-container {
-
+#accepted_card {
+    font-weight: bold;
 }
 
-.btn {
-
+.icon_card_container {
+    font-size: x-large;
+    font-weight: bold;
 }
 
-.price {
-
+#submit {
+    font-size: x-large;
+    font-weight: bold;
 }
 
-#fname {
-
+#cart_title {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
 }
 
-#email {
-
+#cart_container {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
 }
 
-#adr {
-
+#total_text {
+    font-size: xx-large;
+    font-weight: bold;
 }
 
-#city {
-
+#price {
+    font-size: xxx-large;
+    font-weight: bold;
 }
-
-#zip {
-
-}
-
-#cname {
-
-}
-
-#ccn {
-
-}
-
-#expmonth {
-
-}
-
-#expyear {
-
-}
-
-#cvv {
-
-}
-
-
-

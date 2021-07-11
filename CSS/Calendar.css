@@ -1,31 +1,45 @@
-* {box-sizing: border-box;}
-ul {list-style-type: none;}
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
 body {
     background-image: url(../IMAGES/water1.jpg);
-    background-size:cover;
+    background-size: cover;
     font-family: Verdana, sans-serif;
 }
 
 #title {
-  color: lightgoldenrodyellow;
-  text-align: center;
-  font-family: Algerian;
-  font-size: 40px;
-  animation-name: Programmes;
-  animation-duration: 8s;
-  margin: 50px;
-  text-shadow:10px 10px 20px black;
+    color: lightgoldenrodyellow;
+    text-align: center;
+    font-family: Algerian;
+    font-size: 40px;
+    animation-name: Programmes;
+    animation-duration: 8s;
+    margin: 50px;
+    text-shadow: 10px 10px 20px black;
 }
 
 @keyframes Programmes {
-    0%   {color: #004E64;}
-    25%  {color: #FAF33E;}
-    50%  {color: #379634;}
-    100% {color: #CE8147;}
+    0% {
+        color: #004E64;
+    }
+    25% {
+        color: #FAF33E;
+    }
+    50% {
+        color: #379634;
+    }
+    100% {
+        color: #CE8147;
+    }
 }
 
 th {
-    font-size: 48px; 
+    font-size: 48px;
     margin-bottom: 0%;
     padding-top: 10px;
     text-align: center;
@@ -43,29 +57,29 @@ th {
 
 /* Month list */
 .month ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .month ul li {
-  color: #FFFFFFE6;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+    color: #FFFFFFE6;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 /* Weekdays (Mon-Sun) */
 .weekdays {
-  padding: 10px 0;
-  margin: 0;
-  background-color:#ddddddE6;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #ddddddE6;
 }
 
 .weekdays li {
-  display: inline-block;
-  width: 12%;
-  color: #666666E6;
-  text-align: center;
+    display: inline-block;
+    width: 12%;
+    color: #666666E6;
+    text-align: center;
 }
 
 /* Days (1-31) */
@@ -80,73 +94,73 @@ th {
 }
 
 .days li {
-  padding: 10px 0;
-  list-style-type: none;
-  display: inline-block;
-  width: 12%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777777CC;
+    padding: 10px 0;
+    list-style-type: none;
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777777CC;
 }
 
 /* Highlight the "current" day */
 .days li .active {
-  padding: 10px;
-  background: #1abc9cE6;
-  color: white !important
+    padding: 10px;
+    background: #1abc9cE6;
+    color: white !important
 }
 
 /* Red Days */
 .redDays {
-  padding: 10px 0;
-  background: rgba(224, 139, 139, 0.9);
-  margin: 0;
+    padding: 10px 0;
+    background: rgba(224, 139, 139, 0.9);
+    margin: 0;
 
-  color: black
+    color: black
 }
 
 /* Green Days */
 .greenDays {
-  padding: 10px 0;
-  background: rgba(139, 224, 167, 0.9);
-  margin: 0;
+    padding: 10px 0;
+    background: rgba(139, 224, 167, 0.9);
+    margin: 0;
 
-  color: black
+    color: black
 }
 
 /* Yellow Days */
 .yellowDays {
-  padding: 10px 0;
-  background: rgba(206, 209, 30, 0.9);
-  margin: 0;
+    padding: 10px 0;
+    background: rgba(206, 209, 30, 0.9);
+    margin: 0;
 
-  color: black
+    color: black
 }
 
 /* Hover text for color text*/
 .redDays, .greenDays, .yellowDays {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted #000000E6;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #000000E6;
 }
 
 .redDays .tooltiptext, .greenDays .tooltiptext, .yellowDays .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #000000E6;
-  color: #ffffffCC;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+    visibility: hidden;
+    width: 120px;
+    background-color: #000000E6;
+    color: #ffffffCC;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
 }
 
 .redDays:hover .tooltiptext, .greenDays:hover .tooltiptext, .yellowDays:hover .tooltiptext {
-  visibility: visible;
+    visibility: visible;
 }
 
 table, td {

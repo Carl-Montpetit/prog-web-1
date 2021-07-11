@@ -1,5 +1,10 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-image: url(../IMAGES/kids2.jpg);
@@ -45,8 +50,16 @@ h1 {
 }
 
 @keyframes Ajouter {
-    0%   {color: #00A5CF;}
-    25%  {color: #9FFFCB;}
-    50%  {color: #25A18E;}
-    100% {color: #7AE582;}
+    0% {
+        color: #00A5CF;
+    }
+    25% {
+        color: #9FFFCB;
+    }
+    50% {
+        color: #25A18E;
+    }
+    100% {
+        color: #7AE582;
+    }
 }

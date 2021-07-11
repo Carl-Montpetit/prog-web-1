@@ -9,8 +9,8 @@ section {
     height: 600px;
     width: fit-content;
     box-shadow: 10px 10px 20px black;
-    border-style:solid;
-    border-color:#9FFFCBB3;
+    border-style: solid;
+    border-color: #9FFFCBB3;
     border-radius: 30px;
     border-width: 1px;
 }
@@ -24,13 +24,13 @@ h2 {
 
 h3 {
     font-size: 40px;
-    color:  rgb(252, 252, 252);
+    color: rgb(252, 252, 252);
     text-align: center;
 }
 
 h4 {
     font-size: 22px;
-    color:  lightgoldenrodyellow;
+    color: lightgoldenrodyellow;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@ h2, h3, h4 {
 
 body {
     background-image: url(../IMAGES/water5.jpg);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     color: black;
 }
@@ -59,14 +59,22 @@ header {
     animation-duration: 8s;
     text-align: center;
     margin: 50px;
-    text-shadow:10px 10px 20px black;
+    text-shadow: 10px 10px 20px black;
 }
 
 @keyframes Programmes {
-    0%   {color: #004E64;}
-    25%  {color: #FAF33E;}
-    50%  {color: #379634;}
-    100% {color: #CE8147;}
+    0% {
+        color: #004E64;
+    }
+    25% {
+        color: #FAF33E;
+    }
+    50% {
+        color: #379634;
+    }
+    100% {
+        color: #CE8147;
+    }
 }
 
 body ul {
@@ -89,13 +97,14 @@ iframe {
 
 .fa {
     text-align: center;
-    font-size:120px;color:#7ae582;
-    text-shadow:2px 2px 4px #000000;
+    font-size: 120px;
+    color: #7ae582;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #cart {
     /* margin-left: 450px; */
-    background-image: linear-gradient(#25A18EB3, #00A5CFB3,  #004E64B3);
+    background-image: linear-gradient(#25A18EB3, #00A5CFB3, #004E64B3);
     position: relative;
     height: fit-content;
 }
