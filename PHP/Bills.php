@@ -24,7 +24,6 @@
                             required: true,
                             maxWords: 1,
                             rangelength: [ 3,20 ],
-                            monForm
                         },
                         nom: {
                             lettersonly: true,
@@ -109,91 +108,74 @@
             } );
     </script>
 </head>
-<header>
-    <iframe src="./navbar.php" frameborder="0"></iframe>
-</header>
-<body class>
+<body>
 <h1>Paiement de votre facture</h1>
-<div class="row">
-    <div class="col-75">
-        <div class="container">
-            <div class="row">
-                <div class="col-50">
-                    <h3>Information personnel</h3>
-                    <form id="inputs_paiements">
-                        <label for="fname"><em class="fa fa-user"></em> Prénom </label>
-                        <input type="text" id="fname" name="firstname" placeholder="Carl">
-                        <label for="fname"><em class="fa fa-user"></em> Nom </label>
-                        <input type="text" id="lname" name="lastname" placeholder="Montpetit">
-                        <br><br>
-                        <label for="email"><em class="fa fa-envelope"></em> Courriel</label>
-                        <input type="text" id="email" name="email" placeholder="...@exemple.com">
-                        <br><br>
-                        <label for="adr"><em class="fa fa-address-card-o"></em> Addresse</label>
-                        <input type="text" id="adr" name="address" placeholder="1234 rue Lacordaire">
-                        <br><br>
-                        <label for="city"><em class="fa fa-institution"></em> Ville</label>
-                        <input type="text" id="city" name="city" placeholder="Montréal">
-                        <br><br>
-                        <label for="country">Pays</label>
-                        <input type="text" id="country" name="country" placeholder="Canada">
-                        <br><br>
-                        <label for="zip">Code postal</label>
-                        <input type="text" id="zip" name="zip" placeholder="H2M3H1">
-                        <hr>
-                        <div class="col-50">
-                            <h3>Paiement</h3>
-                            <label id="accepted_card" fname">Cartes acceptés :</label>
-                            <div class="icon_card_container">
-                                <em class="fa fa-cc-visa" style="color:navy;"></em>
-                                <em class="fa fa-cc-mastercard" style="color:red;"></em>
-                            </div>
-                            <br><br>
-                            <label for="cname">Nom sur la carte</label>
-                            <input type="text" id="cname" name="cardname" placeholder="Carl Montpetit">
-                            <br><br>
-                            <label for="ccnum">Numéro de la carte</label>
-                            <!--  Documentation: https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
-                            <input id="ccnum" type="tel" inputmode="numeric" name="ccnum" pattern="[0-9\s]{13,19}"
-                                   autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
-                            <br><br>
-                            <label for="expmonth">Mois d'expiration</label>
-                            <input type="text" id="expmonth" name="expmonth" placeholder="Septembre">
-                            <br><br>
-                            <label for="expyear">Année d'expiration</label>
-                            <input type="text" id="expyear" name="expyear" placeholder="2025">
-                            <br><br>
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="354">
-                            <br><br>
-                        </div>
-                    </form>
-                </div>
-            <hr>
-            </div>
-            <label>
-                <input type="checkbox" checked="checked" name="same_adress"> L'adresse de livraison est la même que
-                celle du
-                paiement
-            </label>
-            <input id="submit" value="Continuer pour payer" class="btn" type="button" name="done">
+<div class="col-75">
+    <h3>Information personnel</h3>
+    <form id="inputs_paiements" action="confirmBill.php" method="post">
+        <label for="fname"><em class="fa fa-user"></em> Prénom </label>
+        <input type="text" id="fname" name="firstname" placeholder="Carl">
+        <label for="fname"><em class="fa fa-user"></em> Nom </label>
+        <input type="text" id="lname" name="lastname" placeholder="Montpetit">
+        <br><br>
+        <label for="email"><em class="fa fa-envelope"></em> Courriel</label>
+        <input type="text" id="email" name="email" placeholder="...@exemple.com">
+        <br><br>
+        <label for="adr"><em class="fa fa-address-card-o"></em> Address</label>
+        <input type="text" id="adr" name="address" placeholder="1234 rue Lacordaire">
+        <br><br>
+        <label for="city"><em class="fa fa-institution"></em> Ville</label>
+        <input type="text" id="city" name="city" placeholder="Montréal">
+        <br><br>
+        <label for="country">Pays</label>
+        <input type="text" id="country" name="country" placeholder="Canada">
+        <br><br>
+        <label for="zip">Code postal</label>
+        <input type="text" id="zip" name="zip" placeholder="H2M3H1">
+        <hr>
+        <h3>Paiement</h3>
+        <label id="accepted_card" fname">Cartes acceptés :</label>
+        <div class="icon_card_container">
+            <em id="visa" class="fa fa-cc-visa""></em>
+            <em id="mastercard" class="fa fa-cc-mastercard""></em>
         </div>
-    </div>
-    <div class="col-25">
-        <div id="cart_container" class="container">
-            <h3 id="panier_title">Votre panier</h3>
-            <label id="cart_title"><i id="cart" class="fa fa-shopping-cart"> 3</i>
-            </label>
-            <p><a href="#">Le classique</a> <span class="price">100$</span></p>
-            <p><a href="#">Art et Science</a> <span class="price">150$</span></p>
-            <p><a href="#">L'enfant actif</a> <span class="price">100$</span></p>
-            <hr>
-            <p id="total_text">Totale : <span id="price" class="price"
-                                              style="color:purple"><strong>350$</strong></span></p>
-        </div>
+        <br><br>
+        <label for="cname">Nom sur la carte</label>
+        <input type="text" id="cname" name="cardname" placeholder="Carl Montpetit">
+        <br><br>
+        <label for="ccnum">Numéro de la carte</label>
+        <!--  Documentation: https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
+        <input id="ccnum" type="tel" inputmode="numeric" name="ccnum" pattern="[0-9\s]{13,19}"
+               autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+        <br><br>
+        <label for="expmonth">Mois d'expiration</label>
+        <input type="text" id="expmonth" name="expmonth" placeholder="Septembre">
+        <br><br>
+        <label for="expyear">Année d'expiration</label>
+        <input type="text" id="expyear" name="expyear" placeholder="2025">
+        <br><br>
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="354">
+        <br><br>
+        <hr>
+        <input type="checkbox" checked="checked" name="same_adress"> L'adresse de livraison est la même
+        que celle du paiement
+        <br>
+        <input id="submit" value="Confirmer le paiment" class="btn" type="submit" name="done">
+    </form>
+</div>
+<div class="col-25">
+    <div id="cart_container" class="container">
+        <h3 id="panier_title">Votre panier</h3>
+        <label id="cart_title"><i id="cart" class="fa fa-shopping-cart"> 3</i>
+        </label>
+        <p><a href="Programs.php">Le classique</a> <span class="price">100$</span></p>
+        <p><a href="Programs.php">Art et Science</a> <span class="price">150$</span></p>
+        <p><a href="Programs.php">L'enfant actif</a> <span class="price">100$</span></p>
+        <hr>
+        <p id="total_text">Totale : <span id="price" class="price">350$</span></p>
     </div>
 </div>
-
 </body>
 
 </html>

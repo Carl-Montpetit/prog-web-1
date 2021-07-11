@@ -1,4 +1,4 @@
-html {
+body {
     background: url(../images/water2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -88,6 +88,7 @@ h3 {
 
 #accepted_card {
     font-weight: bold;
+    font-size: large;
 }
 
 .icon_card_container {
@@ -96,8 +97,10 @@ h3 {
 }
 
 #submit {
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
+    color: lightcyan;
+    background-color: rebeccapurple;
 }
 
 #cart_title {
@@ -120,4 +123,23 @@ h3 {
 #price {
     font-size: xxx-large;
     font-weight: bold;
+    color: rebeccapurple;
+}
+
+#visa {
+    color: navy;
+}
+
+#mastercard {
+    color: red;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    width: auto;
+}
+
+input {
+    margin-left: auto;
 }
