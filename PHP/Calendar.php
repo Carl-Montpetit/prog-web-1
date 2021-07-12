@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calendrier</title>
-<link href="..\CSS\Calendar.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Paiement</title>
+    <!-- Ajust the display in function of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- To link the file to the style sheet -->
+    <link href="..\CSS\Calendar.css" rel="stylesheet">
 
+    <title>Calendrier</title>
+</head>
 <body>
 <iframe src="./navbar.php" frameborder="0"></iframe>
 <table>
