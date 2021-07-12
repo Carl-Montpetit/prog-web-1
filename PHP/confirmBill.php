@@ -1,3 +1,4 @@
+<!-- Server side validation -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

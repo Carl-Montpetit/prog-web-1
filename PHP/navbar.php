@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-
 <html lang="eng">
+
 <head>
+    <meta charset="UTF-8">
+    <!-- Ajust the display in function of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- for icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- To link the file to the style sheet -->
     <link rel="stylesheet" href="../CSS/navbar.css">
+    <!-- JS -->
     <script src="../JS/Main.js"></script>
+
 </head>
 <?php
+// define variables and set to empty values
+$first_name_err = $last_name_err = $email_err = $pw1_err = $pw2_err = "";
+$first_name = $last_name = $email = $pw1 = $pw2 = "";
+
 function test_input( $data )
 {
     $data = trim( $data );
@@ -17,7 +28,9 @@ function test_input( $data )
 }
 
 ?>
-<body>
+<body><?php echo
+$first_name_err
+?>
 <nav>
     <div class="dropdown">
         <a href="Main.php" target="_top">
@@ -54,28 +67,24 @@ function test_input( $data )
     </div>
 
 </nav>
-
 <div id="createAccountForm">
-    <form id="createForm" method="post" action="<?php echo $_SERVER[ 'PHP_SELF' ]; ?>">
+    <form id="inputs_createAccount" method="post" action="<?php echo $_SERVER[ 'PHP_SELF' ]; ?>">
         <br>
         <label for="text">Prenom:</label><br>
-        <input type="text" id="prenom" name="first_name" placeholder="Entrez votre prenom"><br>
+        <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prenom">
+        <br>
         <label for="text">Nom:</label><br>
-        <input type="text" id="nom" name="last_name" placeholder="Entrez votre nom" required><br>
+        <input type="text" id="last_name" name="last_name" placeholder="Entrez votre nom"><br>
         <label for="email">Courriel:</label><br>
-        <input type="email" id="email" name="email" placeholder="Entrez votre courriel" required><br>
+        <input type="email" id="email" name="email" placeholder="Entrez votre courriel"><br>
         <label for="password">Mot de passe:</label><br>
-        <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe" required><br>
-        <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe" required><br>
+        <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe"><br>
+        <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
         <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div>
         <br>
         <input type="submit" value="Enregistrer">
     </form>
     <?php
-    // define variables and set to empty values
-    $first_name_err = $last_name_err = $email_err = $pw1_err = $pw2_err = "";
-    $first_name = $last_name = $email = $pw1 = $pw2 = "";
-
     if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         if ( empty( $_POST[ "first_name" ] ) ) {
             $first_name_err = "Le prénom est requis!";
@@ -122,6 +131,9 @@ function test_input( $data )
         <input type="submit" value="Se Connecter">
     </form>
 </div>
-
+<!-- jQuery -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+<script src="../JS/form_validation_bill.js"></script>
 </body>
 </html>

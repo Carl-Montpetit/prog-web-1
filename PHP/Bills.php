@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Paiement</title>
-    <!-- Ajust the display in function of the screen -->
+    <!-- Ajust the display in function of the device -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -81,7 +81,6 @@
         <p id="total_text">Totale : <span id="price" class="price">350$</span></p>
     </div>
 </div>
-<script src="../JS/form_validation_bill.js"></script>
 <!-- jQuery -->
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
