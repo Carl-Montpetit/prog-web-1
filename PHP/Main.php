@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!-- Language for using HTML -->
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ajust the display in function of the device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- To link the file to the style sheet -->
     <title>Accueil</title>
-    <!-- In head we put the link with CSS file for this specific HTML file -->
     <link rel="stylesheet" href="../CSS/Main.css">
 
 </head>
@@ -66,7 +66,7 @@
             <ul>
                 <li>Un horaire de <strong>5</strong> jours</li>
                 <li>Des activités ou des blocs d'activités (activités composé d'activités) pour
-                    <strong>chaque jours</strong>
+                    <strong>chaque jour</strong>
                 </li>
                 <li>Une description</li>
                 <li>Des moniteurs</li>
