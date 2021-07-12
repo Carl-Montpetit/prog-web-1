@@ -29,16 +29,16 @@ $card_num_err
     = $exp_month_err = $exp_year_err = $cvv_err = "";
 
 if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
-    if ( empty( $_POST[ "firstname" ] ) ) {
+    if ( empty( $_POST[ "first_name" ] ) ) {
         $first_name_err = "Le prénom est requis!";
     } else {
-        $first_name = test_input( $_POST[ "firstname" ] );
+        $first_name = test_input( $_POST[ "first_name" ] );
     }
 
-    if ( empty( $_POST[ "lastname" ] ) ) {
+    if ( empty( $_POST[ "last_name" ] ) ) {
         $last_name_err = "Le nom est requis!";
     } else {
-        $last_name = test_input( $_POST[ "lastname" ] );
+        $last_name = test_input( $_POST[ "last_name" ] );
     }
 
     if ( empty( $_POST[ "address" ] ) ) {
@@ -71,28 +71,28 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $zip = test_input( $_POST[ "zip" ] );
     }
 
-    if ( empty( $_POST[ "cardname" ] ) ) {
+    if ( empty( $_POST[ "card_name" ] ) ) {
         $card_name_err = "Le nom sur la carte est requis!";
     } else {
-        $card_name = test_input( $_POST[ "cardname" ] );
+        $card_name = test_input( $_POST[ "card_name" ] );
     }
 
-    if ( empty( $_POST[ "ccnum" ] ) ) {
+    if ( empty( $_POST[ "card_number" ] ) ) {
         $card_num_err = "Le numéro de la carte est requis!";
     } else {
-        $card_num = test_input( $_POST[ "ccnum" ] );
+        $card_num = test_input( $_POST[ "card_number" ] );
     }
 
-    if ( empty( $_POST[ "expmonth" ] ) ) {
+    if ( empty( $_POST[ "exp_month" ] ) ) {
         $exp_month_err = "Le mois d'expiration de la carte est requis!";
     } else {
-        $exp_month = test_input( $_POST[ "expmonth" ] );
+        $exp_month = test_input( $_POST[ "exp_month" ] );
     }
 
-    if ( empty( $_POST[ "expyear" ] ) ) {
+    if ( empty( $_POST[ "exp_year" ] ) ) {
         $exp_year_err = "L'année d'expiration de la carte est requise!";
     } else {
-        $exp_year = test_input( $_POST[ "expyear" ] );
+        $exp_year = test_input( $_POST[ "exp_year" ] );
     }
 
     if ( empty( $_POST[ "cvv" ] ) ) {
@@ -101,16 +101,16 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $cvv = test_input( $_POST[ "cvv" ] );
     }
 
-    if ( empty( $_POST[ "expmonth" ] ) ) {
-        $same_adress = "L'adresse de livraison est la même que celle du paiment!";
+    if ( empty( $_POST[ "same_address" ] ) ) {
+        $same_address = "L'adresse de livraison est la même que celle du paiment!";
     } else {
-        $same_adress = "L'adresse de livraison n'est pas la même que celle du paiment!";
+        $same_address = "L'adresse de livraison n'est pas la même que celle du paiment!";
     }
 }
 
 
 ?>
-<h1>Confirmation du paiement de : <?php echo $_POST[ "firstname" ] . " " . $_POST[ "lastname" ]; ?></h1>
+<h1>Confirmation du paiement de : <?php echo $_POST[ "first_name" ] . " " . $_POST[ "last_name" ]; ?></h1>
 
 <h2>Voici vos informations :</h2>
 <p>
@@ -128,7 +128,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         "mois d'expiration : " . $exp_month . "<br>" .
         "année d'expiration : " . $exp_year . "<br>" .
         "CVV : " . $cvv . "<br>" .
-        "même adresse pour la livraison que l'achat : " . $same_adress . "<br>" .
+        "même adresse pour la livraison que l'achat : " . $same_address . "<br>" .
         "date du paiment : " . $date;
     ?>
 </p>
