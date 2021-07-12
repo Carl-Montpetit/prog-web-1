@@ -1,3 +1,7 @@
+function goBack() {
+  window.history.back();
+}
+
 function showCover() {
     let coverDiv = document.createElement( 'div' );
     coverDiv.id = 'cover-div';

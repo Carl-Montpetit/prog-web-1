@@ -1,5 +1,5 @@
-#connectAccountForm {
-    background-image: linear-gradient(#004E64, #00A5CF, #25A18E);
+#createAccountForm {
+    background-image: linear-gradient(#004E64F0, #00A5CFF0, #25A18EF0);
     position: fixed;
     top: 0;
     left: 0;
@@ -20,8 +20,8 @@
 
 ::placeholder {
     font-size: 15px;
-    color: lightgrey;
-    border: green;
+    color: #00000080;
+    padding: 5px;
 }
 
 input {
@@ -29,6 +29,7 @@ input {
 }
 
 input.button {
+    font-weight: bold;
     background-color: #25A18E;
     border-radius: 25px;
     width: 100px;
