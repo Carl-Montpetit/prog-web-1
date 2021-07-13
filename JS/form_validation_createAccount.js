@@ -4,22 +4,17 @@ $().ready(function () { // wait for the document to be loaded before start the c
     $( "#inputs_createAccount" ).validate( { // initialize the form validation
         rules: {
             first_name: {
-                lettersonly: true,
                 required: true,
-                maxWords: 1,
                 rangelength: [ 3,20 ],
             },
             last_name: {
-                lettersonly: true,
                 required: true,
-                maxWords: 1,
                 rangelength: [ 3,20 ],
             },
             email: {
-                alphanumecic: true,
                 required: true,
                 email: true,
-                remote: "check-email.php", // pour valider que le courriel est unique
+                remote: "", // validate unique email
             },
 
             pw1: {
@@ -29,35 +24,38 @@ $().ready(function () { // wait for the document to be loaded before start the c
             pw2: {
                 required: true,
                 pattern: "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
-                equalTo: "#pw"
+                equalTo: "#pw1" // validate if pw2 == pw1
             }
         },
         messages: {
             first_name: {
-                lettersonly: "L'entrée de votre prénom doit contenir que des lettres!",
-                required: "S'il vous plait, veuillez entrer votre prénom!",
-                maxWords: "Seulement un mot est autoriser pour le prénom!",
-                rangelength: "Le prénom doit contenir au minimum 3 lettres et au maximum 20 inclusivement!"
+                required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer votre prénom!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" + "Le prénom doit contenir au minimum 3 lettres et au" +
+                    " maximum 20 inclusivement!" + "</span>"
 
             },
             last_name: {
-                lettersonly: "L'entrée de votre nom doit contenir que des lettres!",
-                required: "S'il vous plait, veuillez entrer votre prénom!",
-                maxWords: "Seulement un mot est autoriser pour le prénom!",
-                rangelength: "Le prénom doit contenir au minimum 3 lettres et au maximum 20 inclusivement!",
+                required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer votre prénom!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" + "Le prénom doit contenir au minimum 3 lettres et au" +
+                    " maximum 20 inclusivement!" + "</span>",
             },
             email: {
-                required: "S'il vous plait, veuillez entrer votre adresse courriel!",
-                email: "L'adresse courriel doit être du format adresse courriel (ex: abc123@gmail.com)",
-                remote: "Ce courriel est déjà lié à un compte!",
+                required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer votre adresse courriel!" + "</span>",
+                email: "<br>" + "<span class='err'>" + "L'adresse courriel doit être du format adresse courriel (ex:" +
+                    " abc123@gmail.com)" + "</span>",
+                remote: "<br>" + "<span class='err'>" + "Ce courriel est déjà lié à un compte!" + "</span>",
             },
             pw1: {
-                required: "S'il vous plait, veuillez entrer votre mot de passe!",
-                pattern: "Le mot de passe doit contenir : 1 lettre majuscule, 1 lettre minuscule, 1 nombre et 8 caractères ou plus",
+                required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer votre mot de passe!" + "</span>",
+                pattern: "<br>" + "<span class='err'>" + "Le mot de passe doit contenir : 1 lettre majuscule, 1" +
+                    " lettre minuscule, 1 nombre et 8" + " caractères ou plus" + "</span>",
             },
             pw2: {
-                required: "S'il vous plait, veuillez entrer le même mot de passe que ci-haut!",
-                pattern: "Le mot de passe doit contenir : 1 lettre majuscule, 1 lettre minuscule, 1 nombre et 8 caractères ou plus",
+                required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer le même mot de passe que" +
+                    " ci-haut!" + "</span>",
+                pattern: "<br>" + "<span class='err'>" + "Le mot de passe doit contenir : 1 lettre majuscule, 1" +
+                    " lettre minuscule, 1 nombre et 8" +
+                    " caractères ou plus" + "</span>",
             },
         },
     } );
