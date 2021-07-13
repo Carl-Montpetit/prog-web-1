@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paiement</title>
     <!-- Adjust the display in function of the device -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- for icons -->
@@ -13,6 +12,7 @@
     <title>Créer un Compte</title>
 </head>
 <body>
+<h1>Création d'un compte</h1>
 <?php
 // define variables and set to empty values
 $first_name_err = $last_name_err = $email_err = $pw1_err = $pw2_err = "";
@@ -41,7 +41,7 @@ function test_input( $data )
         <input type="password" id="pw1" name="pw1" placeholder="Créez un mot de passe"><br>
         <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
         <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div>
-        <br>
+
         <input class="button" type="submit" value="Enregistrer">
         <input class="button" type="reset" value="Annuler" onclick="goBack()">
     </form>
@@ -78,7 +78,7 @@ function test_input( $data )
         }
     }
     ?>
-    *** print server invalidations (errors) if exist -> wont be there later because users wont see that ***
+<!--    *** print server invalidations (errors) if exist -> wont be there later because users wont see that ***-->
     <p id="first_name_err" class="err""><?php echo $first_name_err; ?></p>
     <p id="last_name_err" class="err""><?php echo $last_name_err; ?></p>
     <p id="email_err" class="err""><?php echo $email_err; ?></p>

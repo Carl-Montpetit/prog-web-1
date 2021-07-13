@@ -31,13 +31,13 @@ $().ready(function () { // wait for the document to be loaded before start the c
             first_name: {
                 required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer votre prénom!" + "</span>",
                 rangelength: "<br>" + "<span class='err'>" + "Le prénom doit contenir au minimum 3 lettres et au" +
-                    " maximum 20 inclusivement!" + "</span>"
+                    " maximum 20!" + "</span>"
 
             },
             last_name: {
                 required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer votre prénom!" + "</span>",
                 rangelength: "<br>" + "<span class='err'>" + "Le prénom doit contenir au minimum 3 lettres et au" +
-                    " maximum 20 inclusivement!" + "</span>",
+                    " maximum 20!" + "</span>",
             },
             email: {
                 required: "<br>" + "<span class='err'>" + "S'il vous plait, veuillez entrer votre adresse courriel!" + "</span>",
