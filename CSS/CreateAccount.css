@@ -35,3 +35,7 @@ input.button {
     width: 100px;
     padding: 5px;
 }
+
+.err {
+    color: red;
+}

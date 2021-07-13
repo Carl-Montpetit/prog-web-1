@@ -13,24 +13,10 @@
     <!-- JS -->
     <script src="../JS/Main.js"></script>
 
+    <title>Navigation bar</title>
+
 </head>
-<?php
-// define variables and set to empty values
-$first_name_err = $last_name_err = $email_err = $pw1_err = $pw2_err = "";
-$first_name = $last_name = $email = $pw1 = $pw2 = "";
 
-function test_input( $data )
-{
-    $data = trim( $data );
-    $data = stripslashes( $data );
-    $data = htmlspecialchars( $data );
-    return $data;
-}
-
-?>
-<body><?php echo
-$first_name_err
-?>
 <nav>
     <div class="dropdown">
         <a href="Main.php" target="_top">

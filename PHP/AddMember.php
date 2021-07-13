@@ -8,7 +8,7 @@ https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_date
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Ajust the display in function of the device -->
+    <!-- Adjust the display in function of the device -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
