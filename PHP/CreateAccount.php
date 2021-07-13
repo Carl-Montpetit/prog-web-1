@@ -12,6 +12,10 @@
     <title>Créer un Compte</title>
 </head>
 <body>
+<header>
+    <!-- The navbar -->
+    <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
+</header>
 <h1>Création d'un compte</h1>
 <?php
 // define variables and set to empty values
@@ -78,7 +82,7 @@ function test_input( $data )
         }
     }
     ?>
-<!--    *** print server invalidations (errors) if exist -> wont be there later because users wont see that ***-->
+    <!-- *** print server invalidations (errors) if exist -> wont be there later because users won't see that *** -->
     <p id="first_name_err" class="err""><?php echo $first_name_err; ?></p>
     <p id="last_name_err" class="err""><?php echo $last_name_err; ?></p>
     <p id="email_err" class="err""><?php echo $email_err; ?></p>
@@ -89,5 +93,7 @@ function test_input( $data )
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <script src="../JS/form_validation_createAccount.js"></script>
+<!-- JS -->
+<script src="../JS/Main.js"></script>
 </body>
 </html>

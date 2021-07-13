@@ -26,7 +26,7 @@
             <input class="button" type="reset" value="Annuler" onclick="goBack()">
         </form>
     </div>
-
+    <!-- JS -->
     <script src="../JS/Main.js"></script>
 </body>
 </html>

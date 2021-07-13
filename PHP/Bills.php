@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="../CSS/Bills.css">
 </head>
 <body>
+<header>
+    <!-- The navbar -->
+    <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
+</header>
 <h1>Paiement de votre facture</h1>
 <div class="col-75">
     <h3>Information personnel</h3>
@@ -85,5 +89,7 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <script src="../JS/form_validation_bill.js"></script>
+<!-- JS -->
+<script src="../JS/Main.js"></script>
 </body>
 </html>

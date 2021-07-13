@@ -84,3 +84,16 @@ h1 {
     margin: 50px;
     text-shadow: 10px 10px 20px black;
 }
+
+#navbar {
+    display: inline-block;
+}
+
+iframe {
+    top: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}

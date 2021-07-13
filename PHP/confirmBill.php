@@ -13,44 +13,34 @@
     <title>Confirmation</title>
 </head>
 <body>
+<header>
+    <!-- The navbar -->
+    <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
+</header>
 <?php
-// variable for the server
-$servername = "inf3190";
-$username = "name";
-$password = "1234";
-
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$link = mysqli_connect("127.0.0.1", "root", "");
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if($link === false){
+    die("ERROR: Could not connect : " . mysqli_connect_error());
 }
-echo "Connected successfully";
 
-// Create database
-$sql = "CREATE DATABASE myDB";
-if ($conn->query($sql) === TRUE) {
+// Print host information
+echo "Connect Successfully. Host info: " . mysqli_get_host_info($link);
+
+// Attempt create database query execution
+$sql = "CREATE DATABASE bills";
+if(mysqli_query($link, $sql)){
     echo "Database created successfully";
-} else {
-    echo "Error creating database: " . $conn->error;
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 
-// sql to create table
-$sql = "CREATE TABLE MyBills (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-firstname VARCHAR(30) NOT NULL,
-lastname VARCHAR(30) NOT NULL,
-email VARCHAR(50),
-reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Table MyGuests created successfully";
-} else {
-    echo "Error creating table: " . $conn->error;
-}
-$conn->close();
+// Close connection
+mysqli_close($link);
 ?>
 
 <?php
@@ -185,5 +175,7 @@ On vous souhaite un excellent séjour à notre camp!
 <?php
 
 ?>
+<!-- JS -->
+<script src="../JS/Main.js"></script>
 </body>
 </html>

@@ -58,59 +58,59 @@ $( function () {
         },
         messages: {
             first_name: {
-                required: "S'il vous plait, veuillez entrer votre prénom!",
-                rangelength: "Le prénom doit contenir au minimum 3 lettres et au maximum 20!"
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer votre prénom!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" +  "Le prénom doit contenir au minimum 3 lettres et au maximum 20!" + "</span>"
 
             },
             last_name: {
-                required: "S'il vous plait, veuillez entrer votre nom de famille!",
-                rangelength: "Le prénom doit contenir au minimum 3 lettres et au maximum 20!",
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer votre nom de famille!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" +  "Le prénom doit contenir au minimum 3 lettres et au maximum 20!" + "</span>",
             },
             email: {
-                required: "S'il vous plait, veuillez entrer votre adresse courriel!",
-                email: "L'adresse courriel doit être du format adresse courriel (ex: abc123@gmail.com)",
-                remote: "Ce courriel est déjà lié à un compte!",
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer votre adresse courriel!" + "</span>",
+                email: "<br>" + "<span class='err'>" +  "L'adresse courriel doit être du format adresse courriel (ex: abc123@gmail.com)" + "</span>",
+                remote: "<br>" + "<span class='err'>" +  "Ce courriel est déjà lié à un compte!" + "</span>",
             },
             address: {
-                required: "S'il vous plait, veuillez entrer votre adresse!",
-                rangelength: "L'adresse doit contenir entre 3 et 30 caractères!",
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer votre adresse!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" +  "L'adresse doit contenir entre 3 et 30 caractères!" + "</span>",
             },
             zip: {
-                required: "S'il vous plait, veuillez entrer votre code postal!",
-                pattern: "Le code postal n'existe pas, veuillez recommencer!",
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer votre code postal!" + "</span>",
+                pattern: "<br>" + "<span class='err'>" +  "Le code postal n'existe pas, veuillez recommencer!" + "</span>",
             },
             city: {
-                required: "S'il vous plait, veuillez entrer votre ville!",
-                rangelength: "La ville doit contenir entre 3 et 20 lettres!"
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer votre ville!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" +  "La ville doit contenir entre 3 et 20 lettres!" + "</span>"
             },
             country: {
-                required: "S'il vous plait, veuillez entrer votre pays!",
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer votre pays!" + "</span>",
             },
             card_name: {
-                required: "S'il vous plait, veuillez entrer le nom sur la carte!",
-                rangelength: "Le nom doit contenir entre 3 et 20 lettres!"
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer le nom sur la carte!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" +  "Le nom doit contenir entre 3 et 20 lettres!" + "</span>"
             },
             card_number: {
-                required: "S'il vous plait, veuillez entrer le numéro de la carte!",
-                creditcard: "S'il vous plait, ceci doit être un numéro de carte valide!",
-                pattern: "Ceci doit être un numéro de carte valide!"
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer le numéro de la carte!" + "</span>",
+                creditcard: "<br>" + "<span class='err'>" +  "S'il vous plait, ceci doit être un numéro de carte valide!" + "</span>",
+                pattern: "<br>" + "<span class='err'>" +  "Ceci doit être un numéro de carte valide!"
             },
             exp_month: {
-                required: "S'il vous plait, veuillez entrer le nom de la carte!",
-                rangelength: "Le mois d'expiration doit contenir entre 3 et 20 lettres!",
-                number: "Le mois d'expiration doit contenir que des lettres!"
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer le nom de la carte!" + "</span>",
+                rangelength: "<br>" + "<span class='err'>" +  "Le mois d'expiration doit contenir entre 3 et 20 lettres!" + "</span>",
+                number: "<br>" + "<span class='err'>" +  "Le mois d'expiration doit contenir que des lettres!" + "</span>"
             },
             exp_year: {
-                required: "S'il vous plait, veuillez entrer l'année d'expiration de la carte!",
-                minlength: "L'année d'expiration doit contenir 4 nombres!",
-                maxlength: "L'année d'expiration doit contenir 4 nombres!",
-                number: "L'année d'expiration doit contenir que des nombres!"
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer l'année d'expiration de la carte!" + "</span>",
+                minlength: "<br>" + "<span class='err'>" +  "L'année d'expiration doit contenir 4 nombres!" + "</span>",
+                maxlength: "<br>" + "<span class='err'>" +  "L'année d'expiration doit contenir 4 nombres!" + "</span>",
+                number: "<br>" + "<span class='err'>" +  "L'année d'expiration doit contenir que des nombres!" + "</span>"
             },
             cvv: {
-                required: "S'il vous plait, veuillez entrer le CVV de la carte!",
-                minlength: "Le CVV doit contenir 3 nombres!",
-                maxlength: "Le CVV doit contenir 3 nombres!",
-                number: "Le CVV doit contenir que des nombres!"
+                required: "<br>" + "<span class='err'>" +  "S'il vous plait, veuillez entrer le CVV de la carte!" + "</span>",
+                minlength: "<br>" + "<span class='err'>" +  "Le CVV doit contenir 3 nombres!" + "</span>",
+                maxlength: "<br>" + "<span class='err'>" +  "Le CVV doit contenir 3 nombres!" + "</span>",
+                number: "<br>" + "<span class='err'>" +  "Le CVV doit contenir que des nombres!" + "</span>"
             },
         },
     } );
