@@ -20,8 +20,8 @@
 
 ::placeholder {
     font-size: 15px;
-    color: lightgrey;
-    border: green;
+    color: #00000080;
+    padding: 5px;
 }
 
 input {
@@ -29,6 +29,7 @@ input {
 }
 
 input.button {
+    font-weight: bold;
     background-color: #25A18E;
     border-radius: 25px;
     width: 100px;
