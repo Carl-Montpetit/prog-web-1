@@ -13,6 +13,12 @@
     <title>Se connecter</title>
 </head>
 <body>
+    <header>
+        <!-- The navbar -->
+        <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
+    </header>
+    <h1>Se Connecter</h1>
+
     <div id="connectAccountForm">
         <form id="connectForm">
             <br>
@@ -21,12 +27,11 @@
             <label for="password">Mot de passe:</label><br>
             <input type="password" id="pw" name="pw" placeholder="Créez un mot de passe" required><br>
             <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div>
-            <br>
-            <input class="button" type="submit" value="Se Connecter">
-            <input class="button" type="reset" value="Annuler" onclick="goBack()">
+            <input id="cancel" class="button" type="reset" value="Annuler" onclick="home()">
+            <input class="button" type="submit" value="Se Connecter" onclick="home()">
         </form>
     </div>
     <!-- JS -->
-    <script src="../JS/Main.js"></script>
+    <script src="../JS/Login.js"></script>
 </body>
 </html>

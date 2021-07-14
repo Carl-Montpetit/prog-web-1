@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 /* Navbar */
 nav {
     padding: 15px;

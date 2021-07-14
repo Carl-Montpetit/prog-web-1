@@ -35,7 +35,7 @@ function test_input( $data )
     <form id="inputs_createAccount" method="post" action="<?php echo $_SERVER[ 'PHP_SELF' ]; ?>">
         <br>
         <label for="text">Prénom:</label><br>
-        <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prenom">
+        <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prenom" autofocus>
         <br>
         <label for="text">Nom:</label><br>
         <input type="text" id="last_name" name="last_name" placeholder="Entrez votre nom"><br>
@@ -45,9 +45,9 @@ function test_input( $data )
         <input type="password" id="pw1" name="pw1" placeholder="Créez un mot de passe"><br>
         <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
         <div id="pwDoesNotMatch">Les 2 champs ne correspondent pas!</div>
-
-        <input class="button" type="submit" value="Enregistrer">
-        <input class="button" type="reset" value="Annuler" onclick="goBack()">
+        <input id="cancel" class="button" type="reset" value="Annuler" onclick="connect('inputs_createAccount')">
+        <input class="button" type="submit" value="Enregistrer" onclick="connect('inputs_createAccount')">
+        
     </form>
     <?php
     if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
@@ -94,6 +94,6 @@ function test_input( $data )
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
 <script src="../JS/form_validation_createAccount.js"></script>
 <!-- JS -->
-<script src="../JS/Main.js"></script>
+<script src="../JS/CreateAccount.js"></script>
 </body>
 </html>

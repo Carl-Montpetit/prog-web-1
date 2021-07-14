@@ -92,7 +92,7 @@
             </section>
     </table>
 
-    <script src="../JS/Main.js"></script>
+    <script src="../JS/Programs.js"></script>
 </body>
 
 </html>

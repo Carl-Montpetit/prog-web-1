@@ -16,43 +16,43 @@
     <title>Navigation bar</title>
 
 </head>
-
-<nav>
-    <div class="dropdown">
-        <a href="Main.php" target="_top">
-            <button class="dropbtn">Accueil
-                <i class="fa fa-home"></i>
-            </button>
-        </a>
-    </div>
-    <div class="dropdown">
-        <a href="Programs.php" target="_top">
-            <button class="dropbtn">Nos Programmes
-                <i class="fa fa-compass"></i>
-            </button>
-        </a>
-    </div>
-    <div class="dropdown">
-        <a href="Calendar.php" target="_top">
-            <button class="dropbtn">Calendrier
-                <i class="fa fa-calendar"></i>
-            </button>
-        </a>
-    </div>
-    <div id="monCompte" class="dropdown">
-        <button id="monCompteButton" class="dropbtn">Mon compte
-            <i class="fa fa-child"></i>
-        </button>
-        <div class="dropdown-content">
-            <a class="anonymous" href="../PHP/Login.php" target="_top">Se connecter</a>
-            <a class="anonymous" href="../PHP/CreateAccount.php" target="_top">Creer un compte</a>
-            <a class="loggedIn" href="../PHP/AddMember.php" target="_top">Ajouter un Membre</a>
-            <a class="loggedIn">Mes Inscriptions</a>
-            <a class="loggedIn" onclick="disconnect()">Déconnexion</a>
+<body>
+    <nav>
+        <div class="dropdown">
+            <a href="Main.php" target="_top">
+                <button class="dropbtn">Accueil
+                    <i class="fa fa-home"></i>
+                </button>
+            </a>
         </div>
-    </div>
+        <div class="dropdown">
+            <a href="Programs.php" target="_top">
+                <button class="dropbtn">Nos Programmes
+                    <i class="fa fa-compass"></i>
+                </button>
+            </a>
+        </div>
+        <div class="dropdown">
+            <a href="Calendar.php" target="_top">
+                <button class="dropbtn">Calendrier
+                    <i class="fa fa-calendar"></i>
+                </button>
+            </a>
+        </div>
+        <div id="monCompte" class="dropdown">
+            <button id="monCompteButton" class="dropbtn">Mon compte
+                <i class="fa fa-child"></i>
+            </button>
+            <div class="dropdown-content">
+                <a class="anonymous" href="../PHP/Login.php" target="_top">Se connecter</a>
+                <a class="anonymous" href="../PHP/CreateAccount.php" target="_top">Creer un compte</a>
+                <a class="loggedIn" href="../PHP/AddMember.php" target="_top">Ajouter un Membre</a>
+                <a class="loggedIn">Mes Inscriptions</a>
+                <a class="loggedIn" onclick="disconnect()">Déconnexion</a>
+            </div>
+        </div>
 
-</nav>
+    </nav>
 
 
 <!-- jQuery -->
