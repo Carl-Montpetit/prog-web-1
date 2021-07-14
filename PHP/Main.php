@@ -1,3 +1,8 @@
+<?php
+include 'config.php';
+session_start();
+?>
+
 <!DOCTYPE html>
 <!-- Language for using HTML -->
 <html lang="en">

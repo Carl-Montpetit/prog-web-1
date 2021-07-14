@@ -45,7 +45,7 @@
             </button>
             <div class="dropdown-content">
                 <a class="anonymous" href="../PHP/Login.php" target="_top">Se connecter</a>
-                <a class="anonymous" href="../PHP/CreateAccount.php" target="_top">Creer un compte</a>
+                <a class="anonymous" href="../PHP/CreateAccount.php" target="_top">Créer un compte</a>
                 <a class="loggedIn" href="../PHP/AddMember.php" target="_top">Ajouter un Membre</a>
                 <a class="loggedIn">Mes Inscriptions</a>
                 <a class="loggedIn" onclick="disconnect()">Déconnexion</a>
