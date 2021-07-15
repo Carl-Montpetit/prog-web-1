@@ -15,13 +15,6 @@ section {
     width: fit-content;
 }
 
-
-/* #dropSection {
-    position: absolute;
-    float: left;
-    width: 71.75%;
-} */
-
 h2 {
     font-size: 22px;
     font-weight: bold;
@@ -110,8 +103,7 @@ iframe {
     background-image: linear-gradient(#25A18EB3, #00A5CFB3,  #004E64B3);
     position: relative;
     height: 600px;
-    width: fit fit-content;
-    min-width: 17.5%;
+    width: fit-content;
 }
 
 #cartText {
@@ -130,15 +122,67 @@ button {
     box-shadow: 10px 10px 20px black;
 }
 
-.plusButton {
-    margin: auto;
-    display: block;
+#plusButton {
+    margin-right: 0;
     float: none;
+    display: flex;
+    justify-self: center;
     margin-top: 30px;
     border-width: 1px;
     border-radius: 25px;
 }
 
+#plusBulletButton {
+    margin: auto;
+    float: none;
+    display: flex;
+    justify-self: center;
+    margin-top: 30px;
+    border-width: 1px;
+    border-radius: 25px;
+}
+
+#checkmarkButton, #xButton, #undoButton {
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none; 
+    display: inline-flex;
+    align-self: flex-end;
+    justify-self: center;
+    border-width: 1px;
+    border-radius: 25px;
+}
+
 .fa-plus {
+    font-size: 25px;
+    color: #b8df80;
+    display: flex;
+    align-self: center;
+}
+
+.fa-pencil, .fa-dollar, .fa-list {
     font-size: 60px;
+    color: #b8df80;
+    display: flex;
+    align-self: center;
+}
+
+.fa-list-ul {
+    font-size: 30px;
+    color: #b8df80;
+    display: flex;
+    align-self: center;
+}
+
+.fa-check, .fa-times, .fa-undo{
+    font-size: 30px;
+}
+
+.fa-times {
+    color: #df8080;
+}
+
+.fa-undo {
+    color: #dfc780;
 }

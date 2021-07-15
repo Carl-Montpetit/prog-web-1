@@ -21,7 +21,7 @@
     </header>
     <table>
         <td>
-            <section class="relativeObjects" draggable="true" ondragstart="drag(event)" id="classic">
+            <section id="classic" draggable="true" ondragstart="drag(event)">
                 <h2>Le Classique</strong></h2>
                 <h3>100$</strong></h3>
                 <h4>Ce programme comprend :</h4>
@@ -38,7 +38,7 @@
             </section>
         </td>
         <td>
-            <section class="relativeObjects" draggable="true" ondragstart="drag(event)" id="artscience">
+            <section id="artscience" draggable="true" ondragstart="drag(event)">
                 <h2>Les Arts et La Science</strong></h2>
                 <h3>150$</strong></h3>
                 <h4>Ce programme comprend :</h4>
@@ -66,7 +66,7 @@
             </section>
         </td>
         <td>
-            <section class="relativeObjects" draggable="true" ondragstart="drag(event)" id="sport">
+            <section id="sport" draggable="true" ondragstart="drag(event)">
                 <h2>L'enfant Actif</strong></h2>
                 <h3>100$</strong></h3>
                 <h4>Ce programme comprend :</h4>
@@ -85,7 +85,7 @@
             </section>
         </td>
         <td id="addNewPrograms"></td>
-            <section class="relativeObjects" ondrop="drop(event)" ondragover="allowDrop(event)" id="cart">
+            <section id="cart" class="relativeObjects" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <i class="fa fa-cart-arrow-down"></i>
                 <span id="cartText"><br>Glissez vos programs<br>
              dans le panier</span>
