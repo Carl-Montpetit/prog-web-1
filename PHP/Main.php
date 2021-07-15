@@ -2,6 +2,10 @@
 <!-- Matthew Jovani - JOVM19108705 -->
 <!-- Carl Montpetit - MONC08069000 -->
 <!-- Massoud Ferdoussi - FERM28119306 -->
+<?php
+include 'config.php';
+session_start();
+?>
 
 <!DOCTYPE html>
 <!-- Language for using HTML -->
