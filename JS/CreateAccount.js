@@ -15,8 +15,6 @@ function connect() {
             }
             value = value + ' <i class="fa fa-child" ></i>';
             iframe.contentWindow.document.getElementById( "monCompteButton" ).innerHTML = value;
-            document.getElementById('createAccountForm').remove();
-            document.getElementsByTagName('h1')[0].remove();
             return false;
         }
     };
