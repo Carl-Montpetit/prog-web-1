@@ -1,30 +1,26 @@
-<?php 
-
-include 'config.php';
-
+<?php
+// Commence la session
 session_start();
 
-error_reporting(0);
-
-if (isset($_SESSION['email'])) {
-    header("Location: Welcome.php");
+// Vérifie si l'utilisateur a clicker sur le boutton submit
+if(isset($_POST['submit'])){
+    // Définie le courriel et mot de passe dans une liste
+    $logins = array('admin@admin.com' => 'admin');
+    // Décalaration des variables
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $Password = isset($_POST['pw1']) ? $_POST['pw1'] : '';
+    // Vérifie si le courriel et mot de passe existe dans la liste
+    if (isset($logins[$email]) && $logins[$email] == $Password){
+        $_SESSION['UserData']['email']=$logins[$email];
+        // Retourne dans la page main (On peux changer ce bou plus tard!)
+        header("location:Main.php");
+        exit;
+    }
+    // Message d'erreur si le courriel et mot de passe ne concorde pas
+    else{
+        echo "<script>alert('Erreur! Le courriel ou le mot de passe invalide!')</script>";
+    }
 }
-
-if (isset($_POST['submit'])) {
-	$email = $_POST['email'];
-	$password = md5($_POST['pw']);
-
-	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-	$result = mysqli_query($conn, $sql);
-	if ($result->num_rows > 0) {
-		$row = mysqli_fetch_assoc($result);
-		$_SESSION['email'] = $row['email'];
-		header("Location: welcome.php");
-	} else {
-		echo "<script>alert('Le courriel ou le mot de passe est incorrect.')</script>";
-	}
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +34,7 @@ if (isset($_POST['submit'])) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- To link the file to the style sheet -->
         <link rel="stylesheet" href="../CSS/Login.css">
+
     </head>
     <body onload="connect()">
         <header>
@@ -50,11 +47,11 @@ if (isset($_POST['submit'])) {
             <form id="connectForm" method = "post" form action ="">
                 <br>
                 <label for="email">Courriel:</label><br>
-                <input type="email" id="email" name="email" placeholder="Entrez votre courriel" value="<?php echo $email; ?>" required><br>
+                <input type="email" id="email" name="email" placeholder="Entrez votre courriel" required><br>
                 <label for="password">Mot de passe:</label><br>
-                <input type="password" id="pw1" name="pw" placeholder="Créer un mot de passe" value="<?php echo $_POST['password']; ?>" required><br>
+                <input type="password" id="pw1" name="pw1" placeholder="Créer un mot de passe" required><br>
                 <input id="cancel" class="button" type="reset" value="Annuler">
-                <input class="button" type="submit" name = "submit" value="Se Connecter">
+                <input class="button" type="submit" name ="submit" value="Se Connecter">
             </form>
         </div>
     <!-- JS -->
