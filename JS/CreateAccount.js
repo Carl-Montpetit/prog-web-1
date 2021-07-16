@@ -1,5 +1,5 @@
-function connect(formConnect) {
-    let form = document.getElementById( formConnect );
+function connect() {
+    let form = document.getElementById( 'inputs_createAccount' );
     form.onsubmit = function () {
         if(form.first_name.value != "") {
             let value = form.first_name.value;
@@ -15,6 +15,8 @@ function connect(formConnect) {
             }
             value = value + ' <i class="fa fa-child" ></i>';
             iframe.contentWindow.document.getElementById( "monCompteButton" ).innerHTML = value;
+            document.getElementById('createAccountForm').remove();
+            document.getElementsByTagName('h1')[0].remove();
             return false;
         }
     };

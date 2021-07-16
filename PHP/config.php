@@ -6,11 +6,11 @@ $user = "root";
 $pass = "";
 $database = "login_system";
 
-$conn = mysqli_connect($server, $user, $pass, $database);
+//$conn = mysqli_connect($server, $user, $pass, $database);
 
 //Error message if connexion is not done properly
-if (!$conn) {
-    die("<script>alert('Connection Failed.')</script>");
-}
+// if (!$conn) {
+//     die("<script>alert('Connection Failed.')</script>");
+// }
 
 ?>

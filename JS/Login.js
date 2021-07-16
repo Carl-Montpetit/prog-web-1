@@ -1,5 +1,5 @@
-function connect(formConnect) {
-    let form = document.getElementById( formConnect );
+function connect() {
+    form = document.getElementById( 'connectForm' );
     form.onsubmit = function () {
         if(form.elements.value != "") {
             let value = form.first_name.value;

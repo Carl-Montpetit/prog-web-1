@@ -1,5 +1,9 @@
 newProgramOpen = false;
 
+function calcPrice() {
+    total = parseInt(document.getElementById("totalPrice").innerHTML);
+}
+
 function allowDrop( ev ) {
     ev.preventDefault();
 }
@@ -10,19 +14,52 @@ function drag( ev ) {
 
 function drop( ev ) {
     ev.preventDefault();
-    var data = ev.dataTransfer.getData( "text" );
+    let data = ev.dataTransfer.getData( "text" );
     ev.target.appendChild( document.getElementById( data ) );
-    item = document.getElementById( data );
-    item.childNodes[ 3 ].remove();
-    item.childNodes[ 4 ].remove();
-    item.childNodes[ 5 ].remove();
-    if ( item.childNodes.length > 8 ) {
-        item.childNodes[ 6 ].remove();
-        item.childNodes[ 7 ].remove();
+    let item = document.getElementById( data );
+    item.childNodes[ 3 ].style.display = 'none';  
+    item.childNodes[ 5 ].style.display = 'none';
+    item.childNodes[ 7 ].style.display = 'none';
+    if ( item.childNodes.length > 11 ) {
+        item.childNodes[ 9 ].style.display = 'none';
+        item.childNodes[ 11 ].style.display = 'none';
     }
     item.style.height = "20px";
     cartText = document.getElementById("cartText");
     cartText.style.display = 'none';
+    dropArea = document.getElementById("dropArea");
+    dropArea.style.display = "revert";
+    addPrice = parseInt(item.childNodes[ 3 ].innerHTML);
+    total = total + addPrice;
+    document.getElementById("totalPrice").innerHTML = total;
+    item.parentNode.insertBefore(item, item.previousElementSibling);
+}
+
+function dropZone( ev ) {
+    ev.preventDefault();
+    let data = ev.dataTransfer.getData( "text" );
+    ev.target.appendChild( document.getElementById( data ) );
+    let item = document.getElementById( data );
+    item.childNodes[ 3 ].style.display = 'block';  
+    item.childNodes[ 5 ].style.display = 'block';
+    item.childNodes[ 7 ].style.display = 'block';
+    if ( item.childNodes.length > 11 ) {
+        item.childNodes[ 9 ].style.display = 'block';
+        item.childNodes[ 11 ].style.display = 'block';
+    }
+    item.style.height = "600px";
+    subtractPrice = parseInt(item.childNodes[ 3 ].innerHTML);
+    total = total - subtractPrice;
+    document.getElementById("totalPrice").innerHTML = total;
+    newDropArea = document.createElement('td');
+    newDropArea.setAttribute('id','dropArea');
+    newDropArea.setAttribute('class','dropZone');
+    newDropArea.setAttribute('ondrop', 'dropZone(event)');
+    newDropArea.setAttribute('ondragover', 'allowDrop(event)');
+    document.getElementById("newDropZone").appendChild(newDropArea);
+    dropArea2 = document.getElementsByClassName("dropZone");
+    dropArea2[1].style.display = "revert";
+    dropArea2[2].style.display = "revert";
 }
 
 function addProgram() {

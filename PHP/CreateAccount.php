@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
 
         <title>Créer un Compte</title>
     </head>
-    <body>
+    <body onload="connect()">
         <header>
             <!-- The navbar -->
             <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
@@ -82,5 +82,7 @@ if (isset($_POST['submit'])) {
                 <input id="cancel" class="button" type="reset" value="Annuler">
                 <input class="button" type="submit" name = "submit" value="Enregistrer">
         </div>
+    <!-- JS -->
+    <script src="../JS/CreateAccount.js"></script>
     </body>
 </html>

@@ -15,6 +15,23 @@ section {
     width: fit-content;
 }
 
+/* .dropZone {
+    position: relative;
+    background-image: linear-gradient(#004E6422, #00A5CFB3, #25A18E22);
+    width: fit-content;
+    min-width: 400px;
+} */
+
+.dropZone {
+    position: relative;
+    background-image: linear-gradient(#004E6422, #00A5CFB3, #25A18E22);
+    width: fit-content;
+    min-width: 400px;
+    height: 600px;
+    display: none;
+    
+}
+
 h2 {
     font-size: 22px;
     font-weight: bold;
@@ -96,18 +113,50 @@ iframe {
     text-shadow:2px 2px 4px #000000;
 }
 
+.fa-shopping-bag {
+    font-size: 30px;
+    color: #e6f208;
+}
+
 #cart {
-    overflow: visible;
+    overflow: hidden;
     float: right;
     text-align: center;
     background-image: linear-gradient(#25A18EB3, #00A5CFB3,  #004E64B3);
     position: relative;
     height: 600px;
+    min-width: 150px;
     width: fit-content;
+    margin-right: 1.5%;
 }
 
 #cartText {
+    pointer-events: none;
     color: #7ae582A0;
+}
+
+#totalBox {
+    position: absolute;
+    bottom: 15px;
+    pointer-events: none;
+    padding: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: honeydew;
+    border: double;
+    border-radius: 25px;
+    border-width: 2px;
+    font-size: xx-large;
+}
+
+#checkout {
+    padding: 8px;
+    bottom: 55px;
+    left: 95.5%;
+    position: relative;
+    justify-self: flex-end;
+    border-width: 1px;
+    border-radius: 25px;
 }
 
 button {

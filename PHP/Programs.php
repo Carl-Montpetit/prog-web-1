@@ -12,7 +12,7 @@
     <title>Programmes</title>
 </head>
 
-<body>
+<body onload="calcPrice()">
     <iframe id="navBar" onmouseover="unRelative()" src="./navbar.php" frameborder="0"></iframe>
     <button id="createProgram" onclick="addProgram()">+ Creer un nouveau program</button>  <!--TODO: make this button available for admin ONLY  -->
     
@@ -22,8 +22,8 @@
     <table>
         <td>
             <section id="classic" draggable="true" ondragstart="drag(event)">
-                <h2>Le Classique</strong></h2>
-                <h3>100$</strong></h3>
+                <h2>Le Classique</h2>
+                <h3>100 <span>$</span></h3>
                 <h4>Ce programme comprend :</h4>
                 <ul>
                     <li>Un bloc d'activités sportif</li>
@@ -39,8 +39,8 @@
         </td>
         <td>
             <section id="artscience" draggable="true" ondragstart="drag(event)">
-                <h2>Les Arts et La Science</strong></h2>
-                <h3>150$</strong></h3>
+                <h2>Les Arts et La Science</h2>
+                <h3>150 <span>$</span></h3>
                 <h4>Ce programme comprend :</h4>
                 <ul>
                     <li>Plusieurs activités du type :</li>
@@ -67,8 +67,8 @@
         </td>
         <td>
             <section id="sport" draggable="true" ondragstart="drag(event)">
-                <h2>L'enfant Actif</strong></h2>
-                <h3>100$</strong></h3>
+                <h2>L'enfant Actif</h2>
+                <h3>100 <span>$</span></h3>
                 <h4>Ce programme comprend :</h4>
                 <ul>
                     <li>Au moins 4 activités quotidiennes parmi :
@@ -85,12 +85,16 @@
             </section>
         </td>
         <td id="addNewPrograms"></td>
-            <section id="cart" class="relativeObjects" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <td id="dropArea" class="dropZone" ondrop="dropZone(event)" ondragover="allowDrop(event)"></td>
+        <td id="newDropZone"></td>
+            <section id="cart" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <i class="fa fa-cart-arrow-down"></i>
                 <span id="cartText"><br>Glissez vos programs<br>
-             dans le panier</span>
+                dans le panier</span>
+                <div id="totalBox">Total: $<span id="totalPrice">0</span></div>
             </section>
     </table>
+    <button id="checkout"><i class="fa fa-shopping-bag"></i></button>
 
     <script src="../JS/Programs.js"></script>
 </body>

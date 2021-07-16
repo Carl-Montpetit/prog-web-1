@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
         <!-- To link the file to the style sheet -->
         <link rel="stylesheet" href="../CSS/Login.css">
     </head>
-    <body>
+    <body onload="connect()">
         <header>
             <!-- The navbar -->
             <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
@@ -57,5 +57,7 @@ if (isset($_POST['submit'])) {
                 <input class="button" type="submit" name = "submit" value="Se Connecter">
             </form>
         </div>
+    <!-- JS -->
+    <script src="../JS/Login.js"></script>
     </body>
 </html>
