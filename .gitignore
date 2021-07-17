@@ -1,4 +1,12 @@
 .vscode/settings.json
+<<<<<<< HEAD
 src/files
 src/JSON
+=======
+<<<<<<< Updated upstream
+src/files/*
+>>>>>>> f880910e81fa8dcb8eb72aba7a2597cf024edea6
 .idea 
+=======
+.idea
+>>>>>>> Stashed changes

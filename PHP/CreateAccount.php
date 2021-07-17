@@ -11,7 +11,7 @@
 
     <title>Créer un Compte</title>
 </head>
-<body onload="connect()">
+<body>
 <header>
     <!-- The navbar -->
     <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
@@ -20,7 +20,7 @@
 
 <!-- Account creation form -->
 <div id="createAccountForm">
-    <form id="inputs_createAccount" method="post" action="../PHP/ConfirmAccountCreation.php">
+    <form id="inputs_createAccount" method="post" action=”../php/sdConfirmAccountCreation.php”>
         <br>
         <label for="text">Prénom:</label><br>
         <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prénom">
@@ -34,11 +34,12 @@
         <input type="password" id="pw2" name="pw2" placeholder="Confirmez le mot de passe"><br>
         <input id="cancel" class="button" type="reset" value="Annuler">
         <input class="button" type="submit" name="submit" value="Enregistrer">
+    </form>
 </div>
 <!-- jQuery -->
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
-        <script src="../JS/form_validation_createAccount.js"></script>
+<!--        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>-->
+<!--        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>-->
+<!--        <script src="../JS/form_validation_createAccount.js"></script>-->
 <!-- JS -->
 <script src="../JS/CreateAccount.js"></script>
 </body>
