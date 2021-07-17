@@ -113,9 +113,13 @@ iframe {
     text-shadow:2px 2px 4px #000000;
 }
 
-.fa-shopping-bag {
+.fa-usd{
+    pointer-events: none;
     font-size: 30px;
     color: #e6f208;
+    position: relative;
+    bottom: 15px;
+    left: 92.15%;
 }
 
 #cart {
@@ -150,16 +154,24 @@ iframe {
 }
 
 #checkout {
-    padding: 8px;
+    padding: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
     bottom: 55px;
     left: 95.5%;
     position: relative;
     justify-self: flex-end;
-    border-width: 1px;
+    border-width: 5px;
+    border-color: lime;
     border-radius: 25px;
 }
 
-button {
+#hiddenInput {
+    width: 0;
+    height: 0;
+}
+
+button, input {
     position: relative;
     float: left;
     margin: 1.5%;

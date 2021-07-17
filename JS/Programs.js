@@ -1,7 +1,16 @@
 newProgramOpen = false;
+finalCount = 0;
 
 function calcPrice() {
+    //          ***calculates the price in the cart
     total = parseInt(document.getElementById("totalPrice").innerHTML);
+    form = document.getElementById("hiddenForm");
+
+    form.onsubmit = function() {
+        finalPrice = parseInt(document.getElementById("totalPrice").innerHTML);
+        document.getElementById('hiddenInput').value = finalPrice;
+        document.getElementById('hiddenCount').value = finalCount;
+    }
 }
 
 function allowDrop( ev ) {
@@ -13,6 +22,7 @@ function drag( ev ) {
 }
 
 function drop( ev ) {
+    //          ***removes infro from section when dropped in cart
     ev.preventDefault();
     let data = ev.dataTransfer.getData( "text" );
     ev.target.appendChild( document.getElementById( data ) );
@@ -29,13 +39,12 @@ function drop( ev ) {
     cartText.style.display = 'none';
     dropArea = document.getElementById("dropArea");
     dropArea.style.display = "revert";
-    addPrice = parseInt(item.childNodes[ 3 ].innerHTML);
-    total = total + addPrice;
-    document.getElementById("totalPrice").innerHTML = total;
+    storeCartInfo(item);
     item.parentNode.insertBefore(item, item.previousElementSibling);
 }
 
 function dropZone( ev ) {
+     //          ***puts info back on section when dropped in a blank area
     ev.preventDefault();
     let data = ev.dataTransfer.getData( "text" );
     ev.target.appendChild( document.getElementById( data ) );
@@ -48,9 +57,8 @@ function dropZone( ev ) {
         item.childNodes[ 11 ].style.display = 'block';
     }
     item.style.height = "600px";
-    subtractPrice = parseInt(item.childNodes[ 3 ].innerHTML);
-    total = total - subtractPrice;
-    document.getElementById("totalPrice").innerHTML = total;
+    removeCartInfo(item);
+     //          ***creates a new blank area
     newDropArea = document.createElement('td');
     newDropArea.setAttribute('id','dropArea');
     newDropArea.setAttribute('class','dropZone');
@@ -167,7 +175,7 @@ function bulletPrompt() {
     programBullet = prompt("L'info du programme");
     if(programBullet != null) {
         
-        //          ***adds a ul and an li
+        //          ***adds a ul and a li
         ul = document.createElement('ul');
         section.appendChild(ul);
         let li = document.createElement('li');
@@ -182,7 +190,6 @@ function bulletPrompt() {
         if(document.getElementById('plusBulletButton')) {
             document.getElementById('plusBulletButton').remove();
         }
-        
         plusBulletButton = document.createElement('button');
         plusBulletButton.setAttribute('id','plusBulletButton');
         plusBulletButton.setAttribute('class','programButtons');
@@ -214,6 +221,7 @@ function smallBulletPrompt() {
 }
 
 function confirmNewProgram() {
+     //          ***removed the buttons from the section
     if(programBullet != null){
         var i;
         programButtons = document.getElementsByClassName('programButtons');
@@ -228,6 +236,57 @@ function confirmNewProgram() {
 }
 
 function cancelNewProgram() {
+     //          ***deletes the section
     td.remove();
     newProgramOpen = false;
+}
+
+function storeCartInfo(item) {
+     //          ***stores info to be sent to Bills.php
+    finalCount++;
+    addPrice = parseInt(item.childNodes[ 3 ].innerHTML);
+    total = total + addPrice;
+    document.getElementById("totalPrice").innerHTML = total;
+    let temporaryName = item.childNodes[ 1 ].innerHTML;
+    let temporaryPrice = item.childNodes[ 3 ].innerHTML;
+
+    switch(temporaryName) {
+        case "Le Classique":
+            document.getElementById('classique').value = temporaryName;
+            document.getElementById('classiquePrice').value = temporaryPrice;
+            break;
+        case "Arts et Science":
+            document.getElementById('artsScience').value = temporaryName;
+            document.getElementById('artsSciencePrice').value = temporaryPrice;
+            break;
+        case "L'Enfant Actif":
+            document.getElementById('enfantActif').value = temporaryName;
+            document.getElementById('enfantActifPrice').value = temporaryPrice;
+            break;
+    }
+}
+
+function removeCartInfo(item) {
+     //          ***removes info that is sent to Bills.php
+    finalCount--;
+    subtractPrice = parseInt(item.childNodes[ 3 ].innerHTML);
+    total = total - subtractPrice;
+    document.getElementById("totalPrice").innerHTML = total;
+    let temporaryName = item.childNodes[ 1 ].innerHTML;
+    let temporaryPrice = item.childNodes[ 3 ].innerHTML;
+
+    switch(temporaryName) {
+        case "Le Classique":
+            document.getElementById('classique').value = "";
+            document.getElementById('classiquePrice').value = "";
+            break;
+        case "Arts et Science":
+            document.getElementById('artsScience').value = "";
+            document.getElementById('artsSciencePrice').value = "";
+            break;
+        case "L'Enfant Actif":
+            document.getElementById('enfantActif').value = "";
+            document.getElementById('enfantActifPrice').value = "";
+            break;
+    }
 }

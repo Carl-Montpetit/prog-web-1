@@ -27,9 +27,7 @@
                 <h4>Ce programme comprend :</h4>
                 <ul>
                     <li>Un bloc d'activités sportif</li>
-                    <li>
-                        Un autre bloc d’activités possédant :
-                    </li>
+                    <li>Un autre bloc d’activités possédant :</li>
                     <ul>
                         <li>Une activité de type <i>art</i> </li>
                         <li>Une activité de type <i>science</i></li>
@@ -39,7 +37,7 @@
         </td>
         <td>
             <section id="artscience" draggable="true" ondragstart="drag(event)">
-                <h2>Les Arts et La Science</h2>
+                <h2>Arts et Science</h2>
                 <h3>150 <span>$</span></h3>
                 <h4>Ce programme comprend :</h4>
                 <ul>
@@ -67,12 +65,11 @@
         </td>
         <td>
             <section id="sport" draggable="true" ondragstart="drag(event)">
-                <h2>L'enfant Actif</h2>
+                <h2>L'Enfant Actif</h2>
                 <h3>100 <span>$</span></h3>
                 <h4>Ce programme comprend :</h4>
                 <ul>
-                    <li>Au moins 4 activités quotidiennes parmi :
-                    </li>
+                    <li>Au moins 4 activités quotidiennes parmi :</li>
                     <ul>
                         <li>Le basketball</li>
                         <li>Le tennis</li>
@@ -94,7 +91,17 @@
                 <div id="totalBox">Total: $<span id="totalPrice">0</span></div>
             </section>
     </table>
-    <button id="checkout"><i class="fa fa-shopping-bag"></i></button>
+    <form id="hiddenForm" action="../PHP/Bills.php" method="POST">
+        <input id="hiddenInput" type='hidden' name='total'>
+        <input id="classique" type='hidden' name='classique'>
+        <input id="classiquePrice" type='hidden' name='classiquePrice'>
+        <input id="artsScience" type='hidden' name='artsScience'>
+        <input id="artsSciencePrice" type='hidden' name='artsSciencePrice'>
+        <input id="enfantActif" type='hidden' name='enfantActif'>
+        <input id="enfantActifPrice" type='hidden' name='enfantActifPrice'>
+        <input id="hiddenCount" type='hidden' name='count'>
+        <input id="checkout" type="submit" value=''><i class="fa fa-usd"></i></input>
+    </form>
 
     <script src="../JS/Programs.js"></script>
 </body>

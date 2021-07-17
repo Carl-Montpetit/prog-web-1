@@ -23,13 +23,20 @@
         <div class="col-25">
             <div id="cart_container" class="container">
                 <h3 id="panier_title">Votre panier</h3>
-                <label id="cart_title"><em id="cart" class="fa fa-shopping-cart"> 3</em>
+                <label id="cart_title"><em id="cart" class="fa fa-shopping-cart"><?php echo " " . $_POST['count'];?></em>
                 </label>
-                <p><a href="Programs.php">Le classique</a> <span class="price">100$</span></p>
-                <p><a href="Programs.php">Art et Science</a> <span class="price">150$</span></p>
-                <p><a href="Programs.php">L'enfant actif</a> <span class="price">100$</span></p>
+                <p><a href="Programs.php"><?php echo $_POST['classique'];?></a>
+                <span class="price"><?php echo $_POST['classiquePrice'];?></span></p>
+                <p><a href="Programs.php"><?php echo $_POST['artsScience'];?></a>
+                <span class="price"><?php echo $_POST['artsSciencePrice'];?></span></p>
+                <p><a href="Programs.php"><?php echo $_POST['enfantActif'];?></a>
+                <span class="price"><?php echo $_POST['enfantActifPrice'];?></span></p>
                 <hr>
-                <p id="total_text">Totale : <span id="price" class="price">350$</span></p>
+                <p id="total_text">Totale : <span id="price" class="price">
+                    <?php
+                        echo $_POST['total'] . "$";
+                    ?>
+                </span></p>
             </div>
         </div>
     </td>

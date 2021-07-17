@@ -13,3 +13,18 @@ CVV : 123
 Même adresse que la livraison que l'achat : L'adresse de livraison est la même que celle du paiment!
 Date de la transaction : 07/16/2021 06:10:42 pm
 
+Prénom : 
+Nom : 
+Courriel : 
+Adresse : 
+Ville : 
+Pays : 
+Code postal : 
+Nom sur la carte : 
+Numéro de la carte : 
+Mois d'expiration : 
+Année d'expiration : 
+CVV : Le code de sécurité de la carte est requis!
+Même adresse que la livraison que l'achat : L'adresse de livraison est la même que celle du paiment!
+Date de la transaction : 07/17/2021 02:03:38 am
+
