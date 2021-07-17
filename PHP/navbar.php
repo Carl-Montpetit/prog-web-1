@@ -11,12 +11,12 @@
     <!-- To link the file to the style sheet -->
     <link rel="stylesheet" href="../CSS/navbar.css">
     <!-- JS -->
-    <script src="../JS/Main.js"></script>
+    <script src="../JS/navbar.js"></script>
 
     <title>Navigation bar</title>
 
 </head>
-<body>
+<body onload="connect()">
     <nav>
         <div class="dropdown">
             <a href="Main.php" target="_top">

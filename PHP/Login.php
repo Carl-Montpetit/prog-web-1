@@ -4,12 +4,12 @@ session_start();
 
 // verify if the user clicked the submit button
 if(isset($_POST['submit'])){
-    // Définie le courriel et mot de passe dans une liste
+    // email and password in an array
     $logins = array('admin@admin.com' => 'admin');
-    // Décalaration des variables
+    // variables declaration
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $Password = isset($_POST['pw1']) ? $_POST['pw1'] : '';
-    // Vérifie si le courriel et mot de passe existe dans la liste
+    // check if the data exist in the array
     if (isset($logins[$email]) && $logins[$email] == $Password){
         $_SESSION['UserData']['email']=$logins[$email];
         // return to the main page
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Login</title>
+        <title>Connection</title>
         <!-- Adjust the display in function of the device -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- for icons -->
@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
             <!-- The navbar -->
             <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
         </header>
-        <h1>Se Connecter</h1>
+        <h1>Se connecter</h1>
 
         <div id="connectAccountForm">
             <form id="connectForm" method = "post" form action ="">

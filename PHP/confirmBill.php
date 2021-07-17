@@ -144,7 +144,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 <?php
 // for storing the bills data (admin purpose)
 // open a file and write the new content at the end of the actual content
-$myfile = fopen( "../files/customers_bills.txt", "a" ) or die( "Unable to open file!" );
+$myfile = fopen( "../TXT/customers_bills.txt", "a" ) or die( "Unable to open file!" );
 // the variable that contains the content to add
 $txt = "Prénom : ". $first_name . "\n" . "Nom : " . $last_name . "\n" . "Courriel : " . $email . "\n" . "Adresse : " .
 $address . "\n" . "Ville : " . $city . "\n" . "Pays : " . $country . "\n" . "Code postal : " . $zip . "\n" . "Nom sur la carte : " .
