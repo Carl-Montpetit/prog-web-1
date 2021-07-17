@@ -144,13 +144,23 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 <?php
 // for storing the bills data (admin purpose)
 // open a file and write the new content at the end of the actual content
-$myfile = fopen( "../files/customers_data.txt", "a" ) or die( "Unable to open file!" );
+$myfile = fopen( "../files/customers_bills.txt", "a" ) or die( "Unable to open file!" );
 // the variable that contains the content to add
 $txt = "Prénom : ". $first_name . "\n" . "Nom : " . $last_name . "\n" . "Courriel : " . $email . "\n" . "Adresse : " .
 $address . "\n" . "Ville : " . $city . "\n" . "Pays : " . $country . "\n" . "Code postal : " . $zip . "\n" . "Nom sur la carte : " .
 $card_name . "\n" . "Numéro de la carte : ". $card_num . "\n" . "Mois d'expiration : " . $exp_month . "\n" . "Année d'expiration : " .
 $exp_year . "\n" . "CVV : " . $cvv . "\n" . "Même adresse que la livraison que l'achat : " . $same_address . "\n" . "Date de la transaction : " .
-$date . "\n\n";
+$date . "\n" . "========================================================================================================================" . "\n";
+// add the content at the end of the file
+fwrite( $myfile, $txt );
+// close the file
+fclose( $myfile );
+
+// for storing the bills data (admin purpose)
+// open a file and write the new content at the end of the actual content
+$myfile = fopen( "../json/customers_bills.json", "a" ) or die( "Unable to open file!" );
+// the variable that contains the content to add
+$txt = json_encode($_POST, JSON_PRETTY_PRINT) . "\n";
 // add the content at the end of the file
 fwrite( $myfile, $txt );
 // close the file
