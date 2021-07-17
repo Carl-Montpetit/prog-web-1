@@ -12,7 +12,7 @@
     <title>Les enregistrements</title>
 </head>
 <body>
-
+<iframe id="navBar" onmouseover="unRelative()" src="./navbar.php" frameborder="0"></iframe>
 <header>
     <h1>Inscription des programmes</h1>
     <h2>Liste des programmes dans lesquels vous êtes inscrits :</h2>
@@ -36,7 +36,11 @@
     </tr>
     <tr>
         <td>Test 3</td>
-        <td></td>
+        <td>
+        <?php
+                        echo $_POST['total'] . "$";
+                    ?>
+        </td>
         <td></td>
     </tr>
 </table>

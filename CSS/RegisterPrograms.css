@@ -1,17 +1,63 @@
+header {
+    color: lightgoldenrodyellow;
+    text-align: center;
+    font-family: Algerian;
+    font-size: 40px;
+    animation-name: Programmes;
+    animation-duration: 8s;
+    text-align: center;
+    margin: 50px;
+    text-shadow:10px 10px 20px black;
+}
+
+@keyframes Programmes {
+    0%   {color: #004E64;}
+    25%  {color: #FAF33E;}
+    50%  {color: #379634;}
+    100% {color: #CE8147;}
+}
+
+h2 {
+    font-size: 20px;
+}
+
 table {
     font-family: Arial, Calibri;
-    border-collapse: collapse;
-    width: 100%;
+    width: 75%;
+    margin-left: 10%;
+    color: ivory;
+    box-shadow: 10px 10px 20px black;
+    border-spacing: 0;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 25px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 25px;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 25px;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 25px;
 }
 
 td, th {
-    border: 3px solid white;
+    border: 3px solid #ffffffB3;
     text-align: left;
     padding: 6px;
 }
 
 tr:nth-child(even) {
-    background-color: lightblue;
+    background-image: linear-gradient(to right, #25A18EB3, #00A5CFB3,  #004E64B3);
+}
+
+tr:nth-child(odd) {
+    background-image: linear-gradient(to right,#004E64B3 , #00A5CFB3,  #25A18EB3);
 }
 
 body {
@@ -22,7 +68,12 @@ body {
     background-size: cover;
 }
 
-header {
-    background-color: #00A5CF;
-    color: black;
+iframe {
+    top: 0px;
+    position: absolute;
+    padding-top: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }

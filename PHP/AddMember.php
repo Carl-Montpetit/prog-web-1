@@ -20,6 +20,9 @@ https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_date
 
 <body>
 
+<!-- The navbar -->
+<iframe src="./navbar.php" frameborder="0"></iframe>
+
 <h1>Ajouter un membre</h1>
 
 <div id="members">

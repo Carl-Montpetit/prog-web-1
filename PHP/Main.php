@@ -49,8 +49,8 @@
     <br>
     <div>Carl</div>
     <div>Matthew</div>
-    <div>Karim</div>
     <div>Massoud</div>
+    <div class="gone">Karim</div>
     </p>
 </div>
 <div class="c">
