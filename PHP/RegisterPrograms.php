@@ -25,21 +25,18 @@
         <th>Saison</th>
     </tr>
     <tr>
-        <td>Test 1</td>
-        <td>Le classique<br>L'art et la science</br>L'enfant actif</td>
-        <td>Été 2021</td>
+        <td><?php echo $_POST[ "first_name" ] . " " . $_POST[ "last_name" ] ?></td>
+        <td> Ex : Le classique<br>L'art et la science</br>L'enfant actif</td>
+        <td>Ex : Été 2021</td>
     </tr>
     <tr>
         <td>Test 2</td>
-        <td>Le classique</td>
-        <td>Été 2021</td>
+        <td>Ex : Le classique</td>
+        <td>Ex : Été 2021</td>
     </tr>
     <tr>
         <td>Test 3</td>
         <td>
-        <?php
-                        echo $_POST['total'] . "$";
-                    ?>
         </td>
         <td></td>
     </tr>

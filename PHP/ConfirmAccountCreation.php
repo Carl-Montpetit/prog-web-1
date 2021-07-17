@@ -11,6 +11,10 @@
     <title>Confirmation du compte</title>
 </head>
 <body>
+<header>
+    <!-- The navbar -->
+    <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
+</header>
 <?php
 // Function for testing data
 function test_input( $data )
@@ -33,6 +37,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $first_name_err = "Le prénom est requis!";
     } else {
         $first_name = test_input( $_POST[ "first_name" ] );
+        $_GLOBALS = $_POST[ "first_name" ];
     }
 
     if ( empty( $_POST[ "last_name" ] ) ) {
@@ -65,18 +70,20 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 <h2>Voici vos informations :</h2>
 <p>
     <?php
-    date_default_timezone_set('America/Toronto');
-    $date = date('m/d/Y h:i:s a', time());
+    date_default_timezone_set( 'America/Toronto' );
+    $date = date( 'm/d/Y h:i:s a', time() );
     echo "<br><br>" .
         "courriel : " . $email . "<br>" .
         "mot de passe : " . $pw1 . "<br>" .
         "date de la création : " . $date . "<br>";
     ?>
+    <br>
+    <h2>Merci!</h2>
 </p>
 <?php
 // for storing the bills data (admin purpose)
 // open a file and write the new content at the end of the actual content
-$myfile = fopen( "../json/customers_accounts.json", "a" ) or die( "Unable to open file!" );
+$myfile = fopen( "../json/customers_accounts.json", "a" ) or die( "Impossible d'ouvrir le fichier!" );
 // the variable that contains the content to add
 $txt = json_encode( $_POST, JSON_PRETTY_PRINT ) . "\n";
 // add the content at the end of the file

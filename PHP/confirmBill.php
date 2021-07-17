@@ -30,13 +30,11 @@ function test_input( $data )
 
 // define variables and setting them all to empty values
 $first_name = $last_name = $address = $email = $city = $country = $zip = $card_name = $card_num = $exp_month =
-$exp_year = $cvv
-    = "";
+$exp_year = $cvv = "";
 
 // define errors variables and setting them all to empty values
 $first_name_err = $last_name_err = $address_err = $email_err = $city_err = $country_err = $zip_err = $card_name_err =
-$card_num_err
-    = $exp_month_err = $exp_year_err = $cvv_err = "";
+$card_num_err = $exp_month_err = $exp_year_err = $cvv_err = "";
 
 // code for printing errors messages if fields are empty
 if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
@@ -111,12 +109,6 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
     } else {
         $cvv = test_input( $_POST[ "cvv" ] );
     }
-
-    if ( empty( $_POST[ "same_address" ] ) ) {
-        $same_address = "L'adresse de livraison est la même que celle du paiment!";
-    } else {
-        $same_address = "L'adresse de livraison n'est pas la même que celle du paiment!";
-    }
 }
 ?>
 <h1>Confirmation du paiement de : <?php echo $_POST[ "first_name" ] . " " . $_POST[ "last_name" ]; ?></h1>
@@ -124,8 +116,8 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 <h2>Voici vos informations :</h2>
 <p>
     <?php
-    date_default_timezone_set('America/Toronto');
-    $date = date('m/d/Y h:i:s a', time());
+    date_default_timezone_set( 'America/Toronto' );
+    $date = date( 'm/d/Y h:i:s a', time() );
     echo "<br><br>" .
         "courriel : " . $email . "<br>" .
         "adresse : " . $address . "<br>" .
@@ -137,8 +129,9 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         "mois d'expiration : " . $exp_month . "<br>" .
         "année d'expiration : " . $exp_year . "<br>" .
         "CVV : " . $cvv . "<br>" .
-        "même adresse pour la livraison que l'achat : " . $same_address . "<br>" .
-        "date du paiment : " . $date . "<br>";
+        "date du paiement : " . $date . "<br>" .
+        "le totale est de : " . $POST[ "count" ];
+
     ?>
 </p>
 <?php
@@ -146,11 +139,11 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 // open a file and write the new content at the end of the actual content
 $myfile = fopen( "../TXT/customers_bills.txt", "a" ) or die( "Unable to open file!" );
 // the variable that contains the content to add
-$txt = "Prénom : ". $first_name . "\n" . "Nom : " . $last_name . "\n" . "Courriel : " . $email . "\n" . "Adresse : " .
-$address . "\n" . "Ville : " . $city . "\n" . "Pays : " . $country . "\n" . "Code postal : " . $zip . "\n" . "Nom sur la carte : " .
-$card_name . "\n" . "Numéro de la carte : ". $card_num . "\n" . "Mois d'expiration : " . $exp_month . "\n" . "Année d'expiration : " .
-$exp_year . "\n" . "CVV : " . $cvv . "\n" . "Même adresse que la livraison que l'achat : " . $same_address . "\n" . "Date de la transaction : " .
-$date . "\n" . "========================================================================================================================" . "\n";
+$txt = "Prénom : " . $first_name . "\n" . "Nom : " . $last_name . "\n" . "Courriel : " . $email . "\n" . "Adresse : " .
+    $address . "\n" . "Ville : " . $city . "\n" . "Pays : " . $country . "\n" . "Code postal : " . $zip . "\n" . "Nom sur la carte : " .
+    $card_name . "\n" . "Numéro de la carte : " . $card_num . "\n" . "Mois d'expiration : " . $exp_month . "\n" . "Année d'expiration : " .
+    $exp_year . "\n" . "CVV : " . $cvv . "\n" . "Date de la transaction : " .
+    $date . "\n" . "========================================================================================================================" . "\n";
 // add the content at the end of the file
 fwrite( $myfile, $txt );
 // close the file
@@ -160,16 +153,16 @@ fclose( $myfile );
 // open a file and write the new content at the end of the actual content
 $myfile = fopen( "../json/customers_bills.json", "a" ) or die( "Unable to open file!" );
 // the variable that contains the content to add
-$txt = json_encode($_POST, JSON_PRETTY_PRINT) . "\n";
+$txt = json_encode( $_POST, JSON_PRETTY_PRINT ) . "\n";
 // add the content at the end of the file
 fwrite( $myfile, $txt );
 // close the file
 fclose( $myfile );
 ?>
 <div class="thx">
-Merci pour votre confiance et votre intérêt.
-<br>
-On vous souhaite un excellent séjour à notre camp!
+    Merci pour votre confiance et votre intérêt.
+    <br>
+    On vous souhaite un excellent séjour à notre camp!
 </div>
 <!-- JS -->
 <script src="../JS/Main.js"></script>

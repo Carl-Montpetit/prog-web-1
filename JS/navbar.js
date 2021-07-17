@@ -1,8 +1,4 @@
 function connect() {
-    // aller chercher le nom du client dans le json-> nommé "value"
-    $.getJSON( "../json/customers_accounts.js", function ( data ) {});
-
-    let value = "carl";
     var anonymousObjects = document.getElementsByClassName( "anonymous" );
     var i;
     for ( i = 0; i < anonymousObjects.length; i++ ) {

@@ -20,7 +20,7 @@
 
 <!-- Account creation form -->
 <div id="createAccountForm">
-    <form id="inputs_createAccount" method="post" action="../PHP/Navbar.php">
+    <form id="inputs_createAccount" method="post" action="../PHP/ConfirmAccountCreation.php">
         <br>
         <label for="text">Prénom:</label><br>
         <input type="text" id="first_name" name="first_name" placeholder="Entrez votre prénom">

@@ -17,43 +17,41 @@
 
 </head>
 <body onload="connect()">
-    <nav>
-        <div class="dropdown">
-            <a href="Main.php" target="_top">
-                <button class="dropbtn">Accueil
-                    <i class="fa fa-home"></i>
-                </button>
-            </a>
-        </div>
-        <div class="dropdown">
-            <a href="Programs.php" target="_top">
-                <button class="dropbtn">Nos Programmes
-                    <i class="fa fa-compass"></i>
-                </button>
-            </a>
-        </div>
-        <div class="dropdown">
-            <a href="Calendar.php" target="_top">
-                <button class="dropbtn">Calendrier
-                    <i class="fa fa-calendar"></i>
-                </button>
-            </a>
-        </div>
-        <div id="monCompte" class="dropdown">
-            <button id="monCompteButton" class="dropbtn">Mon compte
-                <i class="fa fa-child"></i>
+<nav>
+    <div class="dropdown">
+        <a href="Main.php" target="_top">
+            <button class="dropbtn">Accueil
+                <i class="fa fa-home"></i>
             </button>
-            <div class="dropdown-content">
-                <a class="anonymous" href="../PHP/Login.php" target="_top">Se connecter</a>
-                <a class="anonymous" href="../PHP/CreateAccount.php" target="_top">Créer un compte</a>
-                <a class="loggedIn" href="../PHP/AddMember.php" target="_top">Ajouter un Membre</a>
-                <a class="loggedIn" href="../PHP/RegisterPrograms.php" >Mes Inscriptions</a>
-                <a class="loggedIn" onclick="disconnect()">Déconnexion</a>
-            </div>
+        </a>
+    </div>
+    <div class="dropdown">
+        <a href="Programs.php" target="_top">
+            <button class="dropbtn">Nos Programmes
+                <i class="fa fa-compass"></i>
+            </button>
+        </a>
+    </div>
+    <div class="dropdown">
+        <a href="Calendar.php" target="_top">
+            <button class="dropbtn">Calendrier
+                <i class="fa fa-calendar"></i>
+            </button>
+        </a>
+    </div>
+    <div id="monCompte" class="dropdown">
+        <button id="monCompteButton" class="dropbtn">Mon compte<i class="fa fa-child"></i>
+        </button>
+        <div class="dropdown-content">
+            <a class="anonymous" href="../PHP/Login.php" target="_top">Se connecter</a>
+            <a class="anonymous" href="../PHP/CreateAccount.php" target="_top">Créer un compte</a>
+            <a class="loggedIn" href="../PHP/AddMember.php" target="_top">Ajouter un Membre</a>
+            <a class="loggedIn" href="../PHP/RegisterPrograms.php">Mes Inscriptions</a>
+            <a class="loggedIn" onclick="disconnect()">Déconnexion</a>
         </div>
+    </div>
 
-    </nav>
-
+</nav>
 
 <!-- jQuery -->
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
