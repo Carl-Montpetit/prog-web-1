@@ -8,11 +8,11 @@ body {
 
 body {
     background-image: url(../IMAGES/kids2.jpg);
+    text-align: center;
 }
 
 input[type=text], select, textarea {
     font-size: 18px;
-    width: 15%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -37,7 +37,6 @@ input[type=submit]:hover {
 
 input[type=date], select, textarea {
     font-size: 18px;
-    width: 15%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -50,6 +49,65 @@ input[type=date], select, textarea {
 label {
     font-family: Arial;
     font-size: 20px;
+}
+
+div {
+    display: inline-table;
+}
+
+section {
+    visibility: hidden;
+    display: inline-table;
+    left: 30px;
+    bottom: 150px;
+    position: relative;
+    color: white;
+    background-image: linear-gradient(#004E64B3, #00A5CFB3, #25A18EB3);
+    background-position: center;
+    align-items: center;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 10px 10px 20px black;
+    border-style:solid;
+    border-color:#9FFFCBB3;
+    border-radius: 30px;
+    border-width: 1px;
+    width: fit-content;
+}
+
+button {
+    position: relative;
+    color: white;
+    background-image: linear-gradient(#004E64B3, #00A5CFB3, #25A18EB3);
+    background-position: center;
+    align-items: center;
+    height: fit-content;
+    box-shadow: 10px 10px 20px black;
+    border-style:solid;
+    border-color:#9FFFCBB3;
+    border-radius: 30px;
+    border-width: 1px;
+    width: fit-content;
+}
+
+.fa-child{
+    margin-top: 100px;
+    font-size: 250px;
+}
+
+.fa-plus {
+    pointer-events: none;
+    font-size: 75px;
+    color: green;
+}
+
+#iForm {
+    margin-top: 0;
+    font-size: 70px;
+}
+
+#sex {
+    margin-right: 245px;
 }
 
 h1 {
@@ -83,4 +141,13 @@ iframe {
     overflow: hidden;
     width: 100%;
     height: 100%;
+}
+
+.inline-radio {
+	display: flex;
+	overflow: hidden;
+}
+
+input[id="male"]:checked  ~ #iForm {
+    color: blue;
 }

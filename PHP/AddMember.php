@@ -24,21 +24,33 @@ https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_date
 <iframe src="./navbar.php" frameborder="0"></iframe>
 
 <h1>Ajouter un membre</h1>
-
-<div id="members">
+<div>
+<i class="fa fa-child"></i>
+</div>
+<button onclick="addMember()">
+    <i class="fa fa-plus"></i>
+</button>
+<section id="members">
+    <i id="iForm" class="fa fa-child"></i>
     <form action="/action_page.php">
         <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom..."><br>
-
+        <input type="text" id="prenom" name="prenom" placeholder="Leur prénom..."><br>
         <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" placeholder="Votre nom..."><br>
-
+        <input type="text" id="nom" name="nom" placeholder="Leur nom..."><br>
+        <label id="sex">Sexe</label>
+        <group class='inline-radio'>
+        <input id="male" type="radio" name="sex"><label for="male">masculin</label>
+        <input id="female" type="radio" name="sex"><label for="female">féminin</label>
+        <input id="other" type="radio" name="sex"><label for="other">autre</label>
+        </group><br>
         <label for="date">Date de naissance</label><br>
         <form action="/action_page.php">
             <input type="date" id="date" name="date"><br>
         </form>
         <input type="submit" value="Envoyer">
     </form>
-</div>
+</section>
+
+<script src="../JS/AddMember.js"></script>
 </body>
 </html>
