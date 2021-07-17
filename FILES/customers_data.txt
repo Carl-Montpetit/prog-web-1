@@ -1,0 +1,15 @@
+Prénom : Denis
+Nom : Chose
+Courriel : abc123@gmail.com
+Adresse : 123 rue patente
+Ville : Montreal
+Pays : Canada
+Code postal : H2E2A5
+Nom sur la carte : Denis Chose
+Numéro de la carte : 123234345456567
+Mois d'expiration : juin
+Année d'expiration : 1990
+CVV : 123
+Même adresse que la livraison que l'achat : L'adresse de livraison est la même que celle du paiment!
+Date de la transaction : 07/16/2021 06:10:42 pm
+

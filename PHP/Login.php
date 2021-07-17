@@ -1,8 +1,8 @@
 <?php
-// Commence la session
+// beginning of the session
 session_start();
 
-// Vérifie si l'utilisateur a clicker sur le boutton submit
+// verify if the user clicked the submit button
 if(isset($_POST['submit'])){
     // Définie le courriel et mot de passe dans une liste
     $logins = array('admin@admin.com' => 'admin');
@@ -12,11 +12,11 @@ if(isset($_POST['submit'])){
     // Vérifie si le courriel et mot de passe existe dans la liste
     if (isset($logins[$email]) && $logins[$email] == $Password){
         $_SESSION['UserData']['email']=$logins[$email];
-        // Retourne dans la page main (On peux changer ce bou plus tard!)
+        // return to the main page
         header("location:Main.php");
         exit;
     }
-    // Message d'erreur si le courriel et mot de passe ne concorde pas
+    // error message if the password and email are not corresponding
     else{
         echo "<script>alert('Erreur! Le courriel ou le mot de passe invalide!')</script>";
     }

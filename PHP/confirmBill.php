@@ -17,31 +17,6 @@
     <!-- The navbar -->
     <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
 </header>
-<?php
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-// Create connection
-$link = mysqli_connect("127.0.0.1", "root", "");
-
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect : " . mysqli_connect_error());
-}
-
-// Print host information
-echo "Connect Successfully. Host info: " . mysqli_get_host_info($link);
-
-// Attempt create database query execution
-$sql = "CREATE DATABASE bills";
-if(mysqli_query($link, $sql)){
-    echo "Database created successfully";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
-
-// Close connection
-mysqli_close($link);
-?>
 
 <?php
 // Function for testing data
@@ -53,16 +28,17 @@ function test_input( $data )
     return $data;
 }
 
-// define variables and set to empty values
+// define variables and setting them all to empty values
 $first_name = $last_name = $address = $email = $city = $country = $zip = $card_name = $card_num = $exp_month =
 $exp_year = $cvv
     = "";
 
-// define errors variables and set to empty values
+// define errors variables and setting them all to empty values
 $first_name_err = $last_name_err = $address_err = $email_err = $city_err = $country_err = $zip_err = $card_name_err =
 $card_num_err
     = $exp_month_err = $exp_year_err = $cvv_err = "";
 
+// code for printing errors messages if fields are empty
 if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
     if ( empty( $_POST[ "first_name" ] ) ) {
         $first_name_err = "Le prénom est requis!";
@@ -142,8 +118,6 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $same_address = "L'adresse de livraison n'est pas la même que celle du paiment!";
     }
 }
-
-
 ?>
 <h1>Confirmation du paiement de : <?php echo $_POST[ "first_name" ] . " " . $_POST[ "last_name" ]; ?></h1>
 
@@ -164,17 +138,29 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         "année d'expiration : " . $exp_year . "<br>" .
         "CVV : " . $cvv . "<br>" .
         "même adresse pour la livraison que l'achat : " . $same_address . "<br>" .
-        "date du paiment : " . $date;
+        "date du paiment : " . $date . "<br>";
     ?>
 </p>
+<?php
+// for storing the bills data (admin purpose)
+// open a file and write the new content at the end of the actual content
+$myfile = fopen( "../files/customers_data.txt", "a" ) or die( "Unable to open file!" );
+// the variable that contains the content to add
+$txt = "Prénom : ". $first_name . "\n" . "Nom : " . $last_name . "\n" . "Courriel : " . $email . "\n" . "Adresse : " .
+$address . "\n" . "Ville : " . $city . "\n" . "Pays : " . $country . "\n" . "Code postal : " . $zip . "\n" . "Nom sur la carte : " .
+$card_name . "\n" . "Numéro de la carte : ". $card_num . "\n" . "Mois d'expiration : " . $exp_month . "\n" . "Année d'expiration : " .
+$exp_year . "\n" . "CVV : " . $cvv . "\n" . "Même adresse que la livraison que l'achat : " . $same_address . "\n" . "Date de la transaction : " .
+$date . "\n\n";
+// add the content at the end of the file
+fwrite( $myfile, $txt );
+// close the file
+fclose( $myfile );
+?>
 <div class="thx">
 Merci pour votre confiance et votre intérêt.
 <br>
 On vous souhaite un excellent séjour à notre camp!
 </div>
-<?php
-
-?>
 <!-- JS -->
 <script src="../JS/Main.js"></script>
 </body>
