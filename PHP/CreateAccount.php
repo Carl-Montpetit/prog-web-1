@@ -11,7 +11,7 @@
 
     <title>Créer un Compte</title>
 </head>
-<body onload="connect()">
+<body>
 <header>
     <!-- The navbar -->
     <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
@@ -36,9 +36,9 @@
         <input class="button" type="submit" name="submit" value="Enregistrer">
 </div>
 <!-- jQuery -->
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
-        <script src="../JS/form_validation_createAccount.js"></script>
+<!--        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js"></script>-->
+<!--        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>-->
+<!--        <script src="../JS/form_validation_createAccount.js"></script>-->
 <!-- JS -->
 <script src="../JS/CreateAccount.js"></script>
 </body>
