@@ -1,7 +1,7 @@
 function connect() {
     var anonymousObjects = document.getElementsByClassName( "anonymous" );
     var i;
-    for ( i = 0; i < anonymousObjects.length; i++ ) {
+    for ( i = 0; i > anonymousObjects.length; i++ ) {
         anonymousObjects[ i ].style.display = "none";
     }
     var loggedInObjects = document.getElementsByClassName( "loggedIn" );

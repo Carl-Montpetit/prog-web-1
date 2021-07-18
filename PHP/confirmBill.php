@@ -149,8 +149,8 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         "mois d'expiration : " . $exp_month . "<br>" .
         "année d'expiration : " . $exp_year . "<br>" .
         "CVV : " . $cvv . "<br>" .
-        "date du paiement : " . $date . "<br>" .
-        "le totale est de : " . $POST[ "count" ];
+        "date du paiement : " . $date . "<br>" ;
+//        "le totale est de : " . $POST[ "count" ];
 
     ?>
 </p>
