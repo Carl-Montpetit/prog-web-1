@@ -11,7 +11,7 @@
 
     <title>Créer un Compte</title>
 </head>
-<body>
+<body onload="connect()">
 <header>
     <!-- The navbar -->
     <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>

@@ -1,5 +1,5 @@
 <!--
-Je me suis inspiré des sites :
+I got inspired by w3schools:
 https://www.w3schools.com/howto/howto_css_contact_form.asp
 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_date
 --->

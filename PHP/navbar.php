@@ -15,8 +15,7 @@
 
     <title>Navigation bar</title>
 
-</head>
-<body onload="connect()">
+    <body onload="connect()">
 <nav>
     <div class="dropdown">
         <a href="Main.php" target="_top">
@@ -39,18 +38,29 @@
             </button>
         </a>
     </div>
+    <div class="dropdown">
+        <a href="AddMember.php" target="_top">
+            <button class="dropbtn">Rajouter un membre
+                <i class="fa fa-compass"></i>
+            </button>
+        </a>
+    </div>
+    <div class="dropdown">
+        <a href="RegisterPrograms.php" target="_top">
+            <button class="dropbtn">Programmes enregistré
+                <i class="fa fa-compass"></i>
+            </button>
+        </a>
+    </div>
     <div id="monCompte" class="dropdown">
         <button id="monCompteButton" class="dropbtn">Mon compte<i class="fa fa-child"></i>
         </button>
         <div class="dropdown-content">
             <a class="anonymous" href="../PHP/Login.php" target="_top">Se connecter</a>
             <a class="anonymous" href="../PHP/CreateAccount.php" target="_top">Créer un compte</a>
-            <a class="loggedIn" href="../PHP/AddMember.php" target="_top">Ajouter un Membre</a>
-            <a class="loggedIn" href="../PHP/RegisterPrograms.php">Mes Inscriptions</a>
-            <a class="loggedIn" onclick="disconnect()">Déconnexion</a>
+            <a class="anonymous" onclick="disconnect()">Déconnexion</a>
         </div>
     </div>
-
 </nav>
 
 <!-- jQuery -->
