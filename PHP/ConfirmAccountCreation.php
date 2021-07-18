@@ -40,14 +40,34 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $_GLOBALS = $_POST[ "first_name" ];
     }
 
+    if ( !preg_match( !preg_match( "/^[a-zA-Z ]*$/", $_POST[ "first_name" ] ) ) ) {
+        $first_name_err = "Le prénom est du mauvais format!";
+    } else {
+        $first_name = test_input( $_POST[ "first_name" ] );
+    }
+
     if ( empty( $_POST[ "last_name" ] ) ) {
         $last_name_err = "Le nom est requis!";
     } else {
         $last_name = test_input( $_POST[ "last_name" ] );
     }
 
+    if ( !preg_match( !preg_match( "/^[a-zA-Z ]*$/", $_POST[ "last_name" ] ) ) ) {
+        $first_name_err = "Le nom est du mauvais format!";
+    } else {
+        $first_name = test_input( $_POST[ "last_name" ] );
+    }
+
     if ( empty( $_POST[ "email" ] ) ) {
         $email_err = "Le courriel est requis!";
+    } else {
+        $email = test_input( $_POST[ "email" ] );
+    }
+
+    if ( !preg_match( !preg_match( "/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",
+        $_POST[ "email" ] ) )
+    ) {
+        $email_err = "Le courriel est du mauvais format!";
     } else {
         $email = test_input( $_POST[ "email" ] );
     }
@@ -58,10 +78,22 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $pw1 = test_input( $_POST[ "pw1" ] );
     }
 
+    if ( !preg_match( "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$", $_POST[ "pw1" ] ) ) {
+        $pw1_err = "Le mot de passe est du mauvais format!";
+    } else {
+        $pw1 = test_input( $_POST[ "pw1" ] );
+    }
+
     if ( empty( $_POST[ "pw2" ] ) ) {
         $pw2_err = "La confirmation du mot de passe est requise!";
     } else {
         $pw2 = test_input( $_POST[ "pw2" ] );
+    }
+
+    if ( !preg_match( "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$", $_POST[ "pw2" ] ) ) {
+        $pw2_err = "Le mot de passe est du mauvais format!";
+    } else {
+        $pw2 = test_input( $_POST[ "pw1" ] );
     }
 }
 ?>
@@ -78,7 +110,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         "date de la création : " . $date . "<br>";
     ?>
     <br>
-    <h2>Merci!</h2>
+<h2>Merci!</h2>
 </p>
 <?php
 // for storing the bills data (admin purpose)
