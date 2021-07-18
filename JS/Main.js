@@ -10,8 +10,3 @@ function disconnect() {
         loggedInObjects[ i ].style.display = "none";
     }
 }
-
-// function invalidPw() {
-//     var alert = document.getElementById( "pwDoesNotMatch" );
-//     alert.style.display = "inline";
-// }

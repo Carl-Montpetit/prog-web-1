@@ -1,15 +1,15 @@
 // User side validation
-$().ready(function () { // wait for the document to be loaded before start the code down here
+$().ready( function () { // wait for the document to be loaded before start the code down here
 
     $( "#inputs_createAccount" ).validate( { // initialize the form validation
         rules: {
             first_name: {
                 required: true,
-                rangelength: [ 3,20 ],
+                rangelength: [ 3, 20 ],
             },
             last_name: {
                 required: true,
-                rangelength: [ 3,20 ],
+                rangelength: [ 3, 20 ],
             },
             email: {
                 required: true,
@@ -21,14 +21,14 @@ $().ready(function () { // wait for the document to be loaded before start the c
                 required: true,
                 // Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter,
                 // one number and one special character:
-                pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$",
+                pattern: "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/",
             },
             pw2: {
                 required: true,
                 // Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter,
                 // one number and one special character :
-                pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$",
-                equalTo: $_POST[pw1] // validate if pw2 == pw1
+                pattern: "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/",
+                equalTo: "#pw1" // validate if pw2 == pw1
             }
         },
         messages: {
@@ -63,4 +63,4 @@ $().ready(function () { // wait for the document to be loaded before start the c
             },
         },
     } );
-});
+} );

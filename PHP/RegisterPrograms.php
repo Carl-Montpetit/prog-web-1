@@ -26,7 +26,7 @@
     </tr>
     <tr>
         <td><?php echo $_POST[ "first_name" ] . " " . $_POST[ "last_name" ] ?></td>
-        <td> Ex : Le classique<br>L'art et la science</br>L'enfant actif</td>
+        <td> Ex : Le classique<br>L'art et la science<br>L'enfant actif</td>
         <td>Ex : Été 2021</td>
     </tr>
     <tr>

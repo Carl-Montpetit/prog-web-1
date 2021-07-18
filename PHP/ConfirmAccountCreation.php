@@ -11,36 +11,22 @@
     <title>Confirmation du compte</title>
 </head>
 <body>
-<header>
-    <!-- The navbar -->
-    <iframe id="navbar" src="./navbar.php" frameborder="0"></iframe>
-</header>
 <?php
-// Function for testing data
-function test_input( $data )
-{
-    $data = trim( $data );
-    $data = stripslashes( $data );
-    $data = htmlspecialchars( $data );
-    return $data;
-}
-
 // define variables and setting them all to empty values
 $first_name = $last_name = $email = $pw1 = $pw2 = "";
 
 // define errors variables and setting them all to empty values
 $first_name_err = $last_name_err = $email_err = $pw1_err = $pw2_err = "";
 
-// code for printing errors messages if fields are empty
-if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
+// code for printing errors messages if fields are empty or not valid format
+if ( $_SERVER[ "REQUEST_METHOD" ] === "POST" ) {
     if ( empty( $_POST[ "first_name" ] ) ) {
         $first_name_err = "Le prénom est requis!";
     } else {
         $first_name = test_input( $_POST[ "first_name" ] );
-        $_GLOBALS = $_POST[ "first_name" ];
     }
 
-    if ( !preg_match( !preg_match( "/^[a-zA-Z ]*$/", $_POST[ "first_name" ] ) ) ) {
+    if ( !preg_match( "/^[a-zA-Z ]*$/", $first_name ) ) {
         $first_name_err = "Le prénom est du mauvais format!";
     } else {
         $first_name = test_input( $_POST[ "first_name" ] );
@@ -52,7 +38,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $last_name = test_input( $_POST[ "last_name" ] );
     }
 
-    if ( !preg_match( !preg_match( "/^[a-zA-Z ]*$/", $_POST[ "last_name" ] ) ) ) {
+    if ( !preg_match( "/^[a-zA-Z ]*$/", $_POST[ "last_name" ] ) ) {
         $first_name_err = "Le nom est du mauvais format!";
     } else {
         $first_name = test_input( $_POST[ "last_name" ] );
@@ -64,8 +50,8 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $email = test_input( $_POST[ "email" ] );
     }
 
-    if ( !preg_match( !preg_match( "/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",
-        $_POST[ "email" ] ) )
+    if ( !preg_match( "/^([a-z0-9+_\-]+)(\.[a-z0-9+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",
+        $_POST[ "email" ] )
     ) {
         $email_err = "Le courriel est du mauvais format!";
     } else {
@@ -78,7 +64,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $pw1 = test_input( $_POST[ "pw1" ] );
     }
 
-    if ( !preg_match( "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$", $_POST[ "pw1" ] ) ) {
+    if ( !preg_match( "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/", $_POST[ "pw1" ] ) ) {
         $pw1_err = "Le mot de passe est du mauvais format!";
     } else {
         $pw1 = test_input( $_POST[ "pw1" ] );
@@ -90,7 +76,7 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $pw2 = test_input( $_POST[ "pw2" ] );
     }
 
-    if ( !preg_match( "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$", $_POST[ "pw2" ] ) ) {
+    if ( !preg_match( "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/", $_POST[ "pw2" ] ) ) {
         $pw2_err = "Le mot de passe est du mauvais format!";
     } else {
         $pw2 = test_input( $_POST[ "pw1" ] );
@@ -110,8 +96,9 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         "date de la création : " . $date . "<br>";
     ?>
     <br>
-<h2>Merci!</h2>
 </p>
+<h2>Merci!</h2>
+
 <?php
 // for storing the bills data (admin purpose)
 // open a file and write the new content at the end of the actual content
@@ -122,6 +109,17 @@ $txt = json_encode( $_POST, JSON_PRETTY_PRINT ) . "\n";
 fwrite( $myfile, $txt );
 // close the file
 fclose( $myfile );
+?>
+<?php
+// Function for testing data
+function test_input( $data )
+{
+    $data = trim( $data );
+    $data = stripslashes( $data );
+    $data = htmlspecialchars( $data );
+    return $data;
+}
+
 ?>
 </body>
 </html>

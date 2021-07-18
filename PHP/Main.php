@@ -26,12 +26,12 @@
     <h3>C'est un départ pour l'été 2021!</h3>
     <!-- temporary text for testing the website structure and fill a bit the page to see how it looks like -->
     <p id="text1">
-        Nous voilà sortie de cet enfer de covid 2020! Maintenant il sera <b>enfin</b> possible de profiter
+        Nous voilà sortie de cet enfer de covid 2020! Maintenant il sera <strong>enfin</strong> possible de profiter
         sans
-        avoir à s'<b>étouffer</b> au soleil avec son masque (du moins, on le souhaite)!
+        avoir à s'<strong>étouffer</strong> au soleil avec son masque (du moins, on le souhaite)!
     </p>
     <p>
-        <span style="color: red"><em><b>Important</b>:</span>
+        <span style="color: red"><em><strong>Important</strong>:</span>
         N'oubliez pas de vous assurez que votre enfant a bien recus le vaccin pour combattre le
         covid-19 afin d'éviter une explosion de covid entre les enfants du camp de jour.
     </p>

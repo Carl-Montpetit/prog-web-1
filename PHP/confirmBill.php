@@ -36,10 +36,16 @@ $exp_year = $cvv = "";
 $first_name_err = $last_name_err = $address_err = $email_err = $city_err = $country_err = $zip_err = $card_name_err =
 $card_num_err = $exp_month_err = $exp_year_err = $cvv_err = "";
 
-// code for printing errors messages if fields are empty
+// code for printing errors messages if fields are empty or not valid format
 if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
     if ( empty( $_POST[ "first_name" ] ) ) {
         $first_name_err = "Le prénom est requis!";
+    } else {
+        $first_name = test_input( $_POST[ "first_name" ] );
+    }
+
+    if ( !preg_match( "/^[a-zA-Z ]*$/", $first_name ) ) {
+        $first_name_err = "Le prénom est du mauvais format!";
     } else {
         $first_name = test_input( $_POST[ "first_name" ] );
     }
@@ -50,6 +56,12 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
         $last_name = test_input( $_POST[ "last_name" ] );
     }
 
+    if ( !preg_match( "/^[a-zA-Z ]*$/", $last_name ) ) {
+        $first_name_err = "Le nom est du mauvais format!";
+    } else {
+        $first_name = test_input( $_POST[ "last_name" ] );
+    }
+
     if ( empty( $_POST[ "address" ] ) ) {
         $address_err = "L'addresse est requise!";
     } else {
@@ -58,6 +70,14 @@ if ( $_SERVER[ "REQUEST_METHOD" ] == "POST" ) {
 
     if ( empty( $_POST[ "email" ] ) ) {
         $email_err = "Le courriel est requis!";
+    } else {
+        $email = test_input( $_POST[ "email" ] );
+    }
+
+    if ( !preg_match( "/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",
+        $email )
+    ) {
+        $email_err = "Le courriel est du mauvais format!";
     } else {
         $email = test_input( $_POST[ "email" ] );
     }

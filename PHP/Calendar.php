@@ -8,7 +8,7 @@
     <!-- for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- To link the file to the style sheet -->
-    <link href="..\CSS\Calendar.css" rel="stylesheet">
+    <link href="../CSS/Calendar.css" rel="stylesheet">
 
     <title>Calendrier</title>
 </head>

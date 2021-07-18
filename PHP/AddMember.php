@@ -28,7 +28,7 @@ https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_date
     <i class="fa fa-child"></i>
 </div>
 <button onclick="addMember()">
-    <i class="fa fa-plus"></i>
+    <em class="fa fa-plus"></em>
 </button>
 <section id="members">
     <i id="iForm" class="fa fa-child"></i>
